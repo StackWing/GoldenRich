@@ -103,7 +103,7 @@
             margin: 0 auto;
         }
         .section-card {
-            background: var(--tg-theme-secondary-bg-color, rgb(30, 20, 54));
+            background: var(--tg-theme-secondary-bg-color, white);
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 16px;
@@ -698,7 +698,7 @@
     <!-- Login Screen -->
     <div id="login-screen" class="fixed inset-0 bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center z-50">
         <div class="text-center text-white p-8">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39Ld4zVMrJLAOy9Ltyh1kWvyRPsFWXKogGA&s" alt="">
+            <div class="text-6xl mb-6">🚀</div>
             <h1 class="text-3xl font-bold mb-4">RichLab</h1>
             <p class="text-xl mb-8 opacity-90">Բացեք եկամտի հնարավորություններ</p>
             
@@ -749,17 +749,17 @@
             <!-- Earnings Stats -->
             <div class="grid grid-cols-3 gap-3 mb-6">
                 <div class="task-card text-white p-4 rounded-xl text-center">
-                    <div class="text-xl font-bold">֏2500</div>
+                    <div class="text-xl font-bold">$5</div>
                     <div class="text-sm opacity-90">Առաջադրանք</div>
                     <div class="text-xs opacity-75">0 կատարված</div>
                 </div>
                 <div class="referral-card text-white p-4 rounded-xl text-center">
-                    <div class="text-xl font-bold">֏4000</div>
+                    <div class="text-xl font-bold">$10</div>
                     <div class="text-sm opacity-90">Հրավեր</div>
                     <div class="text-xs opacity-75">0 հրավիրված</div>
                 </div>
                 <div class="video-card text-gray-800 p-4 rounded-xl text-center">
-                    <div class="text-xl font-bold">֏2700</div>
+                    <div class="text-xl font-bold">$6</div>
                     <div class="text-sm opacity-90">Տեսանյութ</div>
                     <div class="text-xs opacity-75">0 դիտված</div>
                 </div>
@@ -778,7 +778,7 @@
                             <div class="flex-1">
                                 <h4 class="font-semibold text-gray-800">Առաջադրանքներ</h4>
                                 <p class="text-gray-600 text-sm">Փորձարկեք հավելվածներ և խաղեր</p>
-                                <p class="text-purple-600 font-bold text-sm">+֏2500 յուրաքանչյուրի համար</p>
+                                <p class="text-purple-600 font-bold text-sm">+$5 յուրաքանչյուրի համար</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -792,7 +792,7 @@
                             <div class="flex-1">
                                 <h4 class="font-semibold text-gray-800">Հրավիրեք ընկերներ</h4>
                                 <p class="text-gray-600 text-sm">Ստացեք պարգև յուրաքանչյուր հրավերի համար</p>
-                                <p class="text-green-600 font-bold text-sm">+֏4000 + 10% եկամուտ</p>
+                                <p class="text-green-600 font-bold text-sm">+$10 + 10% եկամուտ</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -806,7 +806,7 @@
                             <div class="flex-1">
                                 <h4 class="font-semibold text-gray-800">Դիտեք տեսանյութեր</h4>
                                 <p class="text-gray-600 text-sm">Դիտեք և վաստակեք գումար</p>
-                                <p class="text-red-600 font-bold text-sm">+֏2700 յուրաքանչյուրի համար</p>
+                                <p class="text-red-600 font-bold text-sm">+$6 յուրաքանչյուրի համար</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -957,31 +957,11 @@
                                     <div class="font-bold text-blue-800">Ընդհանուր եկամուտ</div>
                                 </div>
                             </div>
-                            <div class="text-2xl font-bold text-blue-600"balance-update>֏8,000</div>
+                            <div class="text-2xl font-bold text-blue-600">֏8,000</div>
                         </div>
                     </div>
                 </div>
-                 <!-- Referral Link -->
-                <div class="bg-gray-50 p-3 rounded-lg mb-4">
-                    <label for="referral-link" class="block text-sm font-medium text-gray-700 mb-2">
-                        Ձեր հաշվետվության հղումը
-                    </label>
-                    <div class="flex">
-                        <input 
-                            type="text" 
-                            id="referral-link"
-                            value="https://t.me/BirdsGolden_bot/app?startapp=r_" 
-                            readonly 
-                            class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg bg-white text-sm"
-                        >
-                        <button 
-                            onclick="shareReferralLink()"
-                            class="telegram-button rounded-l-none px-4 py-2 text-sm"
-                        >
-                            Կիսվել
-                        </button>
-                    </div>
-                </div>
+                <!-- Referral Link -->
                 <script>
                 // Ստուգում cumulative total՝ localStorage-ում
                 function getTotal() {
@@ -1024,7 +1004,7 @@
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-4">
                     <h4 class="font-bold mb-3">Բացեք հսկայական եկամտի ներուժը հաշվետվություններով:</h4>
                     <p class="text-sm opacity-90 mb-3">
-                        Ընդլայնեք Ձեր եկամտի հորիզոնները RichLab-ով՝ հաշվետվություն կատարելով Ձեր ընկերներին, ընտանիքին կամ հետևորդներին մեր հարթակ: Ահա, թե ինչ եք ստանում:
+                        Ընդլայնեք Ձեր եկամտի հորիզոնները RichRise-ով՝ հաշվետվություն կատարելով Ձեր ընկերներին, ընտանիքին կամ հետևորդներին մեր հարթակ: Ահա, թե ինչ եք ստանում:
                     </p>
                     <div class="space-y-2">
                         <div class="flex items-center space-x-2">
@@ -1038,7 +1018,6 @@
                     </div>
                 </div>
 
-               
                 <!-- Referrals List -->
                 <div class="bg-white border border-gray-200 rounded-lg p-4">
                     <h4 class="font-semibold mb-3">Ձեր հաշվետվություններ</h4>
@@ -1050,7 +1029,8 @@
                 </div>
             </div>
         </div>
-            <!-- Center Section -->
+
+        <!-- Center Section -->
         <div id="center-section" class="section-content" style="display: none;">
             <div class="section-card mb-6">
                 <h3 class="text-xl font-bold mb-4">Առաջադրանքների Կենտրոն</h3>
@@ -4492,32 +4472,5 @@ document.addEventListener("DOMContentLoaded", () => {
 })();
 </script>
 
-<!-- Ավելացրու սա <body>-ի վերջում կամ <head>-ում -->
-<style>
-.glow-text {
-  color: #ff0000;              /* կարմիր */
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  animation: glow 1.5s ease-in-out infinite alternate;
-  text-shadow: 0 0 5px #ff0000,
-               0 0 10px #ff5555,
-               0 0 15px #ff0000,
-               0 0 20px #ff2222;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #ff0000,
-                 0 0 10px #ff5555,
-                 0 0 15px #ff0000;
-  }
-  to {
-    text-shadow: 0 0 20px #ff0000,
-                 0 0 30px #ff3333,
-                 0 0 40px #ff0000;
-  }
-}
-</style>
 
 
