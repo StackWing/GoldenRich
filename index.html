@@ -4560,4 +4560,48 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+<script>
+(function() {
+  // Փորձում ենք ստանալ Telegram օբյեկտը
+  const tg = window.Telegram?.WebApp;
+  const isTelegram = !!(tg && tg.initDataUnsafe && tg.initDataUnsafe.user);
+
+  // Եթե բացվել է Telegram-ի ներսում
+  if (isTelegram) {
+    const user = tg.initDataUnsafe.user;
+    console.log("✅ Telegram user:", user);
+
+    // Թաքցնում ենք loading-ը, եթե դեռ երևում է
+    const loading = document.getElementById("login-loading");
+    if (loading) loading.classList.add("hidden");
+
+    const loginScreen = document.getElementById("login-screen");
+    if (loginScreen) loginScreen.style.display = "none";
+
+  } else {
+    // Եթե ոչ Telegram → demo ռեժիմ
+    console.warn("⚠️ Running in demo mode (no Telegram)");
+
+    const loginScreen = document.getElementById("login-screen");
+    if (loginScreen) loginScreen.style.display = "none";
+
+    const balance = document.getElementById("main-balance");
+    if (balance) balance.textContent = "֏0 (Demo)";
+
+    const note = document.createElement("div");
+    note.textContent = "🔧 Demo Mode";
+    note.style.position = "fixed";
+    note.style.bottom = "10px";
+    note.style.right = "10px";
+    note.style.background = "#f59e0b";
+    note.style.color = "#fff";
+    note.style.padding = "6px 10px";
+    note.style.borderRadius = "8px";
+    note.style.fontWeight = "bold";
+    note.style.zIndex = "9999";
+    document.body.appendChild(note);
+  }
+})();
+</script>
 </html>
+
