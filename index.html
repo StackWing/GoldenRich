@@ -2257,29 +2257,28 @@ setInterval(updateBlockchainData,30000);
         }
 
         function updateBalanceDisplay() {
-            const formattedBalance = `֏${currentBalance.toLocaleString()}`;
-            
-            // Update main balance
-            const mainBalance = document.getElementById('main-balance');
-            if (mainBalance) {
-                mainBalance.textContent = formattedBalance;
-            }
-            
-            // Update invite section balance
-            const inviteBalance = document.getElementById('invite-balance');
-            if (inviteBalance) {
-                inviteBalance.textContent = formattedBalance;
-            }
-            
-            // Update cash balance
-            const cashBalance = document.getElementById('cash-balance');
-            if (cashBalance) {
-                cashBalance.textContent = formattedBalance;
-            }
-            
-            // Update withdrawal progress
-            updateWithdrawalProgress();
-        }
+    const formattedBalance = `֏${currentBalance.toLocaleString('hy-AM')}`;
+    
+    // Update main balance
+    const mainBalance = document.getElementById('main-balance');
+    if (mainBalance) {
+        mainBalance.textContent = formattedBalance;
+    }
+    
+    // Update invite section balance
+    const inviteBalance = document.getElementById('invite-balance');
+    if (inviteBalance) {
+        inviteBalance.textContent = formattedBalance;
+    }
+    
+    // Update cash balance
+    const cashBalance = document.getElementById('cash-balance');
+    if (cashBalance) {
+        cashBalance.textContent = formattedBalance;
+    }
+}
+
+        
 
         function updateWithdrawalProgress() {
             const progressText = document.getElementById('withdrawal-progress');
@@ -4604,4 +4603,3 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 </script>
 </html>
-
