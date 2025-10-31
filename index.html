@@ -961,62 +961,117 @@
                         </div>
                     </div>
                 </div>
-                 <!-- Referral Link -->
-                <div class="bg-gray-50 p-3 rounded-lg mb-4">
-                    <label for="referral-link" class="block text-sm font-medium text-gray-700 mb-2">
-                        Ձեր հաշվետվության հղումը
-                    </label>
-                    <div class="flex">
-                        <input 
-                            type="text" 
-                            id="referral-link"
-                            value="https://t.me/BirdsGolden_bot/app?startapp=r_" 
-                            readonly 
-                            class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg bg-white text-sm"
-                        >
-                        <button 
-                            onclick="shareReferralLink()"
-                            class="telegram-button rounded-l-none px-4 py-2 text-sm"
-                        >
-                            Կիսվել
-                        </button>
-                    </div>
-                </div>
-                <script>
-                // Ստուգում cumulative total՝ localStorage-ում
-                function getTotal() {
-                    return parseInt(localStorage.getItem("totalBonus") || "0", 10);
-            }
+                 <!-- Referral Link Section -->
+<div class="bg-gray-50 p-3 rounded-lg mb-4">
+  <label for="referral-link" class="block text-sm font-medium text-gray-700 mb-2">
+    Ձեր հրավերի հղումը
+  </label>
+  <div class="flex">
+    <input 
+      type="text" 
+      id="referral-link"
+      value=""
+      readonly 
+      class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg bg-white text-sm"
+    >
+    <button 
+      onclick="shareReferralLink()"
+      class="telegram-button rounded-l-none px-4 py-2 text-sm"
+    >
+      📤 Կիսվել
+    </button>
+  </div>
+</div>
 
-                function setTotal(value) {
-    localStorage.setItem("totalBonus", value);
+<script>
+// ✅ 1️⃣ — Referral հղման ստեղծում
+function updateReferralLink() {
+  const currentUser = window.TG_USER || { id: "demo_user" };
+  const referralInput = document.getElementById("referral-link");
+  if (referralInput) {
+    const link = `https://t.me/BirdsGolden_bot/app?startapp=r_${currentUser.id}`;
+    referralInput.value = link;
+  }
 }
 
-                // Simulate visitor
-            function simulateVisitor() {
-                let total = getTotal();
-                total += 4000;
-                setTotal(total);
-                alert(`🎉 Simulated visitor! +4000 դրամ ստացվեց\n💰 Հիմնական գումար՝ ${total} դրամ`);
-            }
+// ✅ 2️⃣ — Կիսվելու կոճակը (share / copy)
+function shareReferralLink() {
+  const input = document.getElementById("referral-link");
+  const link = input ? input.value : "";
+  if (!link) return alert("Հղումը դեռ չի ստեղծվել։");
 
-                // Generate referral link
-            function generateReferralLink() {
-                const myId = localStorage.getItem("myId") || Math.floor(Math.random()*1000000);
-                localStorage.setItem("myId", myId);
-                const referralLink = `${window.location.origin}${window.location.pathname}?startapp=r_${myId}`;
-                alert("📩 Ձեր referral հղումը copy արեք կամ ուղարկեք:\n" + referralLink);
-            }
+  if (navigator.share) {
+    navigator.share({
+      title: "Միացիր BirdsGolden-ին 🐦",
+      text: "Ստացիր 4000 դրամ bonus այս հղումով!",
+      url: link
+    }).catch(() => {
+      navigator.clipboard.writeText(link);
+      alert("📋 Հղումը պատճենվեց clipboard-ում!");
+    });
+  } else {
+    navigator.clipboard.writeText(link);
+    alert("📋 Հղումը պատճենվեց clipboard-ում!");
+  }
+}
 
-               // Աշխատեցնելու համար պետք է համապատասխան կոճակները լինեն HTML-ում
-                document.addEventListener("DOMContentLoaded", () => {
-                const simulateBtn = document.getElementById("simulate-visitor");
-                const inviteBtn = document.getElementById("invite-btn");
+// ✅ 3️⃣ — Referral bonus համակարգ
+document.addEventListener("DOMContentLoaded", () => {
+  updateReferralLink();
 
-                if(simulateBtn) simulateBtn.addEventListener("click", simulateVisitor);
-                if(inviteBtn) inviteBtn.addEventListener("click", generateReferralLink);
-           });
-        </script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const startParam = urlParams.get("startapp");
+
+  if (startParam && startParam.startsWith("r_")) {
+    const referrerId = startParam.replace("r_", "");
+    const currentUser = window.TG_USER || { id: "demo_user" };
+    const currentKey = `richlab_balance_${currentUser.id}`;
+    const referrerKey = `richlab_balance_${referrerId}`;
+    const hasReceived = localStorage.getItem("referralBonusReceived_" + currentUser.id);
+
+    if (!hasReceived) {
+      // 💰 Նոր օգտատերը ստանում է 4000 դրամ
+      let userBalance = parseInt(localStorage.getItem(currentKey) || "0");
+      userBalance += 4000;
+      localStorage.setItem(currentKey, userBalance);
+
+      // 💰 Հրավիրողն էլ ստանում է 4000 դրամ
+      let referrerBalance = parseInt(localStorage.getItem(referrerKey) || "0");
+      referrerBalance += 4000;
+      localStorage.setItem(referrerKey, referrerBalance);
+
+      localStorage.setItem("referralBonusReceived_" + currentUser.id, "true");
+
+      // 🎉 Գեղեցիկ popup շնորհակալություն հաղորդագրությամբ
+      const overlay = document.createElement("div");
+      overlay.style = `
+        position:fixed;top:0;left:0;width:100%;height:100%;
+        background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;
+        z-index:9999;
+      `;
+      overlay.innerHTML = `
+        <div style="background:white;border-radius:16px;padding:24px;text-align:center;
+                    box-shadow:0 4px 20px rgba(0,0,0,0.3);max-width:320px;">
+          <h3 style="color:#16a34a;font-weight:bold;margin-bottom:8px;">🎉 Շնորհակալություն!</h3>
+          <p style="margin-bottom:10px;">Դուք ստացաք <strong>4000 դրամ bonus</strong>։</p>
+          <p style="color:#10b981;font-size:14px;">💸 Ձեր հրավիրողն էլ ստացավ 4000 դրամ։</p>
+          <button id="ref-close" style="
+            margin-top:15px;background:#10b981;color:white;
+            font-weight:bold;padding:8px 16px;border:none;
+            border-radius:8px;cursor:pointer;">Լավ</button>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+
+      document.getElementById("ref-close").addEventListener("click", () => {
+        document.body.removeChild(overlay);
+        if (typeof updateBalanceDisplay === "function") updateBalanceDisplay();
+      });
+    }
+  }
+});
+</script>
+
 
 
 
@@ -2114,7 +2169,7 @@ setInterval(updateBlockchainData,30000);
                 // Give welcome bonus
                 setTimeout(() => {
                     showWelcomeBonus();
-                }, 1000);
+                }, 4000);
             }
         }
 
@@ -2257,28 +2312,29 @@ setInterval(updateBlockchainData,30000);
         }
 
         function updateBalanceDisplay() {
-    const formattedBalance = `֏${currentBalance.toLocaleString('hy-AM')}`;
-    
-    // Update main balance
-    const mainBalance = document.getElementById('main-balance');
-    if (mainBalance) {
-        mainBalance.textContent = formattedBalance;
-    }
-    
-    // Update invite section balance
-    const inviteBalance = document.getElementById('invite-balance');
-    if (inviteBalance) {
-        inviteBalance.textContent = formattedBalance;
-    }
-    
-    // Update cash balance
-    const cashBalance = document.getElementById('cash-balance');
-    if (cashBalance) {
-        cashBalance.textContent = formattedBalance;
-    }
-}
-
-        
+            const formattedBalance = `֏${currentBalance.toLocaleString()}`;
+            
+            // Update main balance
+            const mainBalance = document.getElementById('main-balance');
+            if (mainBalance) {
+                mainBalance.textContent = formattedBalance;
+            }
+            
+            // Update invite section balance
+            const inviteBalance = document.getElementById('invite-balance');
+            if (inviteBalance) {
+                inviteBalance.textContent = formattedBalance;
+            }
+            
+            // Update cash balance
+            const cashBalance = document.getElementById('cash-balance');
+            if (cashBalance) {
+                cashBalance.textContent = formattedBalance;
+            }
+            
+            // Update withdrawal progress
+            updateWithdrawalProgress();
+        }
 
         function updateWithdrawalProgress() {
             const progressText = document.getElementById('withdrawal-progress');
@@ -4603,3 +4659,4 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 </script>
 </html>
+
