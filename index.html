@@ -4520,3 +4520,44 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 </style>
 </body>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  try {
+    const tg = window.Telegram?.WebApp || {};
+    const user = tg.initDataUnsafe?.user || { id: "demo_user", first_name: "Guest" };
+
+    // Եթե Telegram-ի տվյալ չկա → demo ռեժիմ
+    if (!tg.initDataUnsafe) {
+      console.warn("⚠️ Demo mode enabled (no Telegram data)");
+
+      const loginScreen = document.getElementById("login-screen");
+      if (loginScreen) loginScreen.style.display = "none";
+
+      const balance = document.getElementById("main-balance");
+      if (balance) balance.textContent = "֏0 (Demo)";
+
+      // Ցույց ենք տալիս, որ demo է
+      const banner = document.createElement("div");
+      banner.textContent = "🔧 DEMO MODE (no Telegram)";
+      banner.style.position = "fixed";
+      banner.style.bottom = "10px";
+      banner.style.right = "10px";
+      banner.style.padding = "6px 10px";
+      banner.style.background = "#f59e0b";
+      banner.style.color = "#fff";
+      banner.style.borderRadius = "6px";
+      banner.style.fontWeight = "bold";
+      banner.style.fontSize = "14px";
+      banner.style.zIndex = "9999";
+      document.body.appendChild(banner);
+    } else {
+      console.log("✅ Telegram user detected:", user);
+    }
+
+    window.TG_USER = user;
+  } catch (err) {
+    console.error("Demo script error:", err);
+  }
+});
+</script>
+</html>
