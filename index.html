@@ -4520,23 +4520,3 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 </style>
 </body>
-</html>
-
-<script>
-(function() {
-  const tg = window.Telegram?.WebApp || {};
-  const user = tg.initDataUnsafe?.user || { id: "demo_user", first_name: "Guest" };
-
-  if (!tg.initDataUnsafe) {
-    console.warn("⚠️ Telegram data not found — running in demo mode");
-    const loginScreen = document.getElementById("login-screen");
-    if (loginScreen) loginScreen.style.display = "none";
-    const balance = document.getElementById("main-balance");
-    if (balance) balance.textContent = "֏0 (Demo)";
-  } else {
-    console.log("✅ Telegram user detected:", user);
-  }
-
-  window.TG_USER = user;
-})();
-</script>
