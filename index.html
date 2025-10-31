@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="hy">
 <head>
@@ -1075,6 +1075,24 @@
                 </div>
 
                
+                <!-- Benefits Section -->
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-4">
+                    <h4 class="font-bold mb-3">Բացեք հսկայական եկամտի ներուժը հաշվետվություններով:</h4>
+                    <p class="text-sm opacity-90 mb-3">
+                        Ընդլայնեք Ձեր եկամտի հորիզոնները RichRise-ով՝ հաշվետվություն կատարելով Ձեր ընկերներին, ընտանիքին կամ հետևորդներին մեր հարթակ: Ահա, թե ինչ եք ստանում:
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-yellow-300">💰</span>
+                            <span class="text-sm">Վաստակեք լրացուցիչ ֏4,000 յուրաքանչյուր հաջող գրանցման համար:</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-300">📈</span>
+                            <span class="text-sm">Եթե Ձեր հրավիրած օգտատերը գումար է վաստակում, Դուք նույնպես ստանում եք այդ գումարի 10%-ը որպես պարգև:</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Referrals List -->
                 <div class="bg-white border border-gray-200 rounded-lg p-4">
                     <h4 class="font-semibold mb-3">Ձեր հաշվետվություններ</h4>
@@ -1086,7 +1104,8 @@
                 </div>
             </div>
         </div>
-            <!-- Center Section -->
+
+        <!-- Center Section -->
         <div id="center-section" class="section-content" style="display: none;">
             <div class="section-card mb-6">
                 <h3 class="text-xl font-bold mb-4">Առաջադրանքների Կենտրոն</h3>
@@ -4641,3 +4660,99 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </html>
 
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
+  <h1 class="text-2xl font-bold mb-2">💰 Ձեր մնացորդը</h1>
+  <h2 id="main-balance" class="text-xl font-semibold">֏0</h2>
+
+  <div class="mt-6 text-center">
+    <button onclick="shareReferral()" class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+      📤 Կիսվել referral հղումով
+    </button>
+  </div>
+
+  <script>
+    (function() {
+      const tg = window.Telegram?.WebApp;
+      const isTelegram = !!(tg && tg.initDataUnsafe && tg.initDataUnsafe.user);
+
+      let currentUser = null;
+      let currentBalance = 0;
+
+      // ✅ 1️⃣ Telegram user info
+      if (isTelegram) {
+        currentUser = tg.initDataUnsafe.user;
+        console.log("✅ Telegram User:", currentUser);
+      } else {
+        // demo համար
+        currentUser = { id: "demo_user", first_name: "Demo" };
+        console.warn("⚠️ Running in demo mode");
+      }
+
+      // ✅ 2️⃣ Սահմանում ենք user balance key
+      const balanceKey = `richlab_balance_${currentUser.id}`;
+      currentBalance = parseInt(localStorage.getItem(balanceKey) || "0");
+
+      // ✅ 3️⃣ Թարմացնում ենք բալանսի ցուցադրությունը
+      function updateBalanceDisplay() {
+        const formatted = `֏${currentBalance.toLocaleString("hy-AM")}`;
+        const el = document.getElementById("main-balance");
+        if (el) el.textContent = formatted;
+      }
+      updateBalanceDisplay();
+
+      // ✅ 4️⃣ Ստուգում ենք referral bonus
+      const params = new URLSearchParams(window.location.search);
+      const startParam = params.get("startapp");
+      if (startParam && startParam.startsWith("r_")) {
+        const referrerId = startParam.replace("r_", "");
+        const hasReceived = localStorage.getItem(`ref_bonus_${currentUser.id}`);
+
+        if (!hasReceived && referrerId !== currentUser.id.toString()) {
+          // Նոր օգտատերը ստանում է 4000 դրամ
+          currentBalance += 4000;
+          localStorage.setItem(balanceKey, currentBalance);
+
+          // Հրավիրողն էլ ստանում է 4000 դրամ
+          const refKey = `richlab_balance_${referrerId}`;
+          const refBal = parseInt(localStorage.getItem(refKey) || "0") + 4000;
+          localStorage.setItem(refKey, refBal);
+
+          // Նշում ենք, որ ստացել է
+          localStorage.setItem(`ref_bonus_${currentUser.id}`, "true");
+          updateBalanceDisplay();
+
+          // Popup
+          showPopup(`🎉 Դուք և ձեր հրավիրողը ստացաք 4000 դրամ bonus!`);
+        }
+      }
+
+      // ✅ 5️⃣ Referral link
+      window.shareReferral = function() {
+        const link = `https://t.me/BirdsGolden_bot/app?startapp=r_${currentUser.id}`;
+        if (navigator.share) {
+          navigator.share({
+            title: "Միացիր ու ստացիր 4000 դրամ bonus!",
+            text: "Ստացիր bonus այս հղումով 💰",
+            url: link,
+          });
+        } else {
+          navigator.clipboard.writeText(link);
+          showPopup("📋 Referral հղումը պատճենվեց!");
+        }
+      };
+
+      // ✅ 6️⃣ Popup helper
+      function showPopup(text) {
+        const div = document.createElement("div");
+        div.textContent = text;
+        div.style = `
+          position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+          background:#10b981;color:white;padding:10px 16px;border-radius:8px;
+          font-weight:bold;box-shadow:0 2px 10px rgba(0,0,0,0.3);z-index:9999;
+        `;
+        document.body.appendChild(div);
+        setTimeout(() => div.remove(), 3000);
+      }
+    })();
+  </script>
+</body>
