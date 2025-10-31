@@ -2311,9 +2311,9 @@ setInterval(updateBlockchainData,30000);
             localStorage.setItem(`richlab_transactions_${currentUser.id}`, JSON.stringify(transactionHistory));
         }
 
-        function updateBalanceDisplay() {
-            const formattedBalance = `֏${currentBalance.toLocaleString()}`;
-            
+        function updateTransactionHistory() {
+            const historyDiv = document.getElementById('transaction-history');
+            if (!historyDiv) return;
             // Update main balance
             const mainBalance = document.getElementById('main-balance');
             if (mainBalance) {
@@ -4659,4 +4659,5 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 </script>
 </html>
+
 
