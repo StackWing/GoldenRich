@@ -1,10 +1,10 @@
-
+ 
 <!DOCTYPE html>
 <html lang="hy">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RichLab - Բացեք եկամտի հնարավորություններ</title>
+    <title>RichLab - Табыс мүмкіндіктерін ашыңыз</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -627,7 +627,7 @@
         
         .deposit-method.selected {
             border-color: #3b82f6;
-            background: #eff6ff;
+            background: #041429;
         }
         
         .deposit-method:hover {
@@ -642,7 +642,7 @@
         
         .withdraw-method.selected {
             border-color: #ef4444;
-            background: #fef2f2;
+            background: #321e3a;
         }
         
         .withdraw-method:hover {
@@ -700,19 +700,19 @@
         <div class="text-center text-white p-8">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39Ld4zVMrJLAOy9Ltyh1kWvyRPsFWXKogGA&s" alt="">
             <h1 class="text-3xl font-bold mb-4">RichLab</h1>
-            <p class="text-xl mb-8 opacity-90">Բացեք եկամտի հնարավորություններ</p>
+            <p class="text-xl mb-8 opacity-90">Табыс мүмкіндіктерін ашыңыз</p>
             
             <div id="login-content">
                 <button onclick="loginWithTelegram()" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg mb-4 w-full max-w-sm">
                     <span class="mr-2">📱</span>
-                    Մուտք Telegram-ով
+                   Telegram арқылы кіру
                 </button>
-                <p class="text-sm opacity-75">Անվտանգ և արագ մուտք</p>
+                <p class="text-sm opacity-75">Қауіпсіз және жылдам қол жеткізу</p>
             </div>
             
             <div id="login-loading" class="hidden">
                 <div class="loading-spinner w-8 h-8 border-4 border-white border-t-transparent rounded-full mx-auto mb-4"></div>
-                <p class="text-lg">Մուտք գործում...</p>
+                <p class="text-lg">Жүйеге кіруде...</p>
             </div>
         </div>
     </div>
@@ -725,7 +725,7 @@
                 <div class="flex items-center space-x-3">
                     <div id="user-info" class="text-sm opacity-90"></div>
                     <button onclick="showDepositModal()" class="bg-white/20 text-white px-3 py-1 rounded-lg text-sm font-medium">
-                        + Ավելացնել
+                        + Қосу
                     </button>
                 </div>
             </div>
@@ -738,36 +738,36 @@
         <div id="home-section" class="section-content">
             <!-- Balance Card -->
             <div class="section-card text-center mb-6" id="balance-card">
-                <h2 class="text-2xl font-bold mb-2">Ընդհանուր մնացորդ</h2>
-                <div class="text-4xl font-bold text-green-600 mb-4" id="main-balance">֏0</div>
-                <p class="text-gray-600">Ավելացրեք գումար և սկսեք վաստակել</p>
+                <h2 class="text-2xl font-bold mb-2">Жалпы қалдық</h2>
+                <div class="text-4xl font-bold text-green-600 mb-4" id="main-balance">₸0</div>
+                <p class="text-gray-600">Ақша қосып, табыс таба бастаңыз</p>
                 <button onclick="showDepositModal()" class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg font-medium">
-                    Ավելացնել գումար
+                    Ақша қосу
                 </button>
             </div>
 
             <!-- Earnings Stats -->
             <div class="grid grid-cols-3 gap-3 mb-6">
                 <div class="task-card text-white p-4 rounded-xl text-center">
-                    <div class="text-xl font-bold">֏2500</div>
-                    <div class="text-sm opacity-90">Առաջադրանք</div>
-                    <div class="text-xs opacity-75">0 կատարված</div>
+                    <div class="text-xl font-bold">₸2500</div>
+                    <div class="text-sm opacity-90">Тапсырма</div>
+                    <div class="text-xs opacity-75">0 дайын</div>
                 </div>
                 <div class="referral-card text-white p-4 rounded-xl text-center">
                     <div class="text-xl font-bold">֏4000</div>
-                    <div class="text-sm opacity-90">Հրավեր</div>
-                    <div class="text-xs opacity-75">0 հրավիրված</div>
+                    <div class="text-sm opacity-90">Шақыру</div>
+                    <div class="text-xs opacity-75">0 шақырылған</div>
                 </div>
                 <div class="video-card text-gray-800 p-4 rounded-xl text-center">
-                    <div class="text-xl font-bold">֏2700</div>
-                    <div class="text-sm opacity-90">Տեսանյութ</div>
-                    <div class="text-xs opacity-75">0 դիտված</div>
+                    <div class="text-xl font-bold">₸2700</div>
+                    <div class="text-sm opacity-90">Бейне</div>
+                    <div class="text-xs opacity-75">0 қаралды</div>
                 </div>
             </div>
 
             <!-- Activities Section -->
             <div class="mb-6">
-                <h3 class="text-xl font-bold mb-4">Վաստակելու եղանակներ</h3>
+                <h3 class="text-xl font-bold mb-4">Табыс табу жолдары</h3>
                 
                 <div class="space-y-3">
                     <div class="section-card card-hover" onclick="showCenter()">
@@ -776,9 +776,9 @@
                                 <span class="text-2xl">📱</span>
                             </div>
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-800">Առաջադրանքներ</h4>
-                                <p class="text-gray-600 text-sm">Փորձարկեք հավելվածներ և խաղեր</p>
-                                <p class="text-purple-600 font-bold text-sm">+֏2500 յուրաքանչյուրի համար</p>
+                                <h4 class="font-semibold text-gray-800">Тапсырмалар</h4>
+                                <p class="text-gray-600 text-sm">Қолданбалар мен ойындарды қолданып көріңіз</p>
+                                <p class="text-purple-600 font-bold text-sm">+₸2500 әрқайсысы үшін</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -790,9 +790,9 @@
                                 <span class="text-2xl">👥</span>
                             </div>
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-800">Հրավիրեք ընկերներ</h4>
-                                <p class="text-gray-600 text-sm">Ստացեք պարգև յուրաքանչյուր հրավերի համար</p>
-                                <p class="text-green-600 font-bold text-sm">+֏4000 + 10% եկամուտ</p>
+                                <h4 class="font-semibold text-gray-800">Достарды шақырыңыз</h4>
+                                <p class="text-gray-600 text-sm">Әрбір шақыру үшін сыйақы алыңыз</p>
+                                <p class="text-green-600 font-bold text-sm">+₸4000 + 10% табыс</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -804,24 +804,24 @@
                                 <span class="text-2xl">📺</span>
                             </div>
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-800">Դիտեք տեսանյութեր</h4>
-                                <p class="text-gray-600 text-sm">Դիտեք և վաստակեք գումար</p>
-                                <p class="text-red-600 font-bold text-sm">+֏2700 յուրաքանչյուրի համար</p>
+                                <h4 class="font-semibold text-gray-800">Бейнелерді көріңіз</h4>
+                                <p class="text-gray-600 text-sm">Көріп, ақша табыңыз</p>
+                                <p class="text-red-600 font-bold text-sm">+₸2700 әрқайсысы үшін</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
                     </div>
-                    
+
                     <div class="section-card card-hover" onclick="handleWithdrawClick()">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                                 <span class="text-2xl">💰</span>
                             </div>
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-800">Կանխիկ ելքագրում</h4>
-                                <p class="text-gray-600 text-sm">Ելքագրեք Ձեր վաստակած գումարը</p>
-                                <p class="text-yellow-600 font-bold text-sm">֏125,000 + 15 աշխատանքային օր</p>
-                                <p class="text-orange-600 text-xs mt-1">⚠️ Գումարը կնստի Ձեր հաշվին 15 աշխատանքային օրերի ընթացքում</p>
+                                <h4 class="font-semibold text-gray-800">Қолма-қол ақша алу</h4>
+                                <p class="text-gray-600 text-sm">Тапқан ақшаңызды алып тастаңыз.</p>
+                                <p class="text-yellow-600 font-bold text-sm">₸125,000 + 15 жұмыс күні</p>
+                                <p class="text-orange-600 text-xs mt-1">⚠️ Ақша сіздің шотыңызға 15 жұмыс күні ішінде есептеледі.</p>
                             </div>
                             <div class="text-gray-400">→</div>
                         </div>
@@ -886,25 +886,7 @@
 
                             <!-- Right: Status & Language -->
                             <div class="text-right">
-                                <div class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2 cursor-pointer hover:bg-green-400 hover:scale-105 transition-all duration-300" onclick="showStatusModal()">
-                                    <div class="flex items-center space-x-1">
-                                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                                        <span>Նոր օգտատեր</span>
-                                    </div>
-                                </div>
-                                <div class="text-xs opacity-75 cursor-pointer hover:text-yellow-200 hover:scale-105 transition-all duration-300 bg-white/10 px-2 py-1 rounded-full" onclick="showLanguageModal()">
-                                    🌐 Լեզու
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Balance Display -->
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center cursor-pointer hover:bg-white/20 hover:scale-105 transition-all duration-300" onclick="showBalanceModal()">
-                            <div class="text-sm opacity-90 mb-1">Ընթացիկ մնացորդ</div>
-                            <div class="text-3xl font-bold mb-2" id="invite-balance">֏${currentBalance.toLocaleString()}</div>
-                            <div class="flex items-center justify-center space-x-4 text-xs opacity-75">
-                                <span>💰 Ակտիվ</span>
-                                <span>•</span>
+                                <div class="bg-green-500 text-whi
                                 <span>🔒 Անվտանգ</span>
                                 <span>•</span>
                                 <span>⚡ Ակնթարթային</span>
@@ -915,14 +897,14 @@
 
                 <!-- Stats Section -->
                 <div class="mb-4">
-                    <h4 class="font-semibold text-gray-800 mb-3">Ստատիկ</h4>
+                    <h4 class="font-semibold text-gray-800 mb-3">Статикалық</h4>
                     <div class="space-y-3">
                         <div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                             <div class="flex items-center space-x-3">
                                 <span class="text-2xl">🎯</span>
                                 <div>
-                                    <div class="font-medium">Առաջադրանք</div>
-                                    <div class="text-sm text-gray-600">֏2,000 per task</div>
+                                    <div class="font-medium">Тапсырма</div>
+                                    <div class="text-sm text-gray-600">₸2,000 әр тапсырма үшін</div>
                                 </div>
                             </div>
                             <div class="text-2xl font-bold text-purple-600">0</div>
@@ -932,8 +914,8 @@
                             <div class="flex items-center space-x-3">
                                 <span class="text-2xl">👥</span>
                                 <div>
-                                    <div class="font-medium">Հրավիրված</div>
-                                    <div class="text-sm text-gray-600">֏4,000 per referral</div>
+                                    <div class="font-medium">Шақырылған</div>
+                                    <div class="text-sm text-gray-600">₸4,000 әрбір билет үшін</div>
                                 </div>
                             </div>
                             <div class="text-2xl font-bold text-green-600">0</div>
@@ -943,8 +925,8 @@
                             <div class="flex items-center space-x-3">
                                 <span class="text-2xl">📺</span>
                                 <div>
-                                    <div class="font-medium">Տեսանյութ</div>
-                                    <div class="text-sm text-gray-600">֏2,300 per video</div>
+                                    <div class="font-medium">Бейне</div>
+                                    <div class="text-sm text-gray-600">₸2,300 per video</div>
                                 </div>
                             </div>
                             <div class="text-2xl font-bold text-red-600">0</div>
@@ -954,141 +936,86 @@
                             <div class="flex items-center space-x-3">
                                 <span class="text-2xl">💰</span>
                                 <div>
-                                    <div class="font-bold text-blue-800">Ընդհանուր եկամուտ</div>
+                                    <div class="font-bold text-blue-800">Жалпы табыс</div>
                                 </div>
                             </div>
-                            <div class="text-2xl font-bold text-blue-600"balance-update>֏8,000</div>
+                            <div class="text-2xl font-bold text-blue-600"balance-update>₸8,000</div>
                         </div>
                     </div>
                 </div>
-                 <!-- Referral Link Section -->
-<div class="bg-gray-50 p-3 rounded-lg mb-4">
-  <label for="referral-link" class="block text-sm font-medium text-gray-700 mb-2">
-    Ձեր հրավերի հղումը
-  </label>
-  <div class="flex">
-    <input 
-      type="text" 
-      id="referral-link"
-      value=""
-      readonly 
-      class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg bg-white text-sm"
-    >
-    <button 
-      onclick="shareReferralLink()"
-      class="telegram-button rounded-l-none px-4 py-2 text-sm"
-    >
-      📤 Կիսվել
-    </button>
-  </div>
-</div>
+                 <!-- Referral Link -->
+                <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                    <label for="referral-link" class="block text-sm font-medium text-gray-700 mb-2">
+                        Есеп сілтемеңіз
+                    </label>
+                    <div class="flex">
+                        <input 
+                            type="text" 
+                            id="referral-link"
+                            value="https://t.me/BirdsGolden_bot/app?startapp=r_" 
+                            readonly 
+                            class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg bg-white text-sm"
+                        >
+                        <button 
+                            onclick="shareReferralLink()"
+                            class="telegram-button rounded-l-none px-4 py-2 text-sm"
+                        >
+                            Бөлісу
+                        </button>
+                    </div>
+                </div>
+                <script>
+                // Ստուգում cumulative total՝ localStorage-ում
+                function getTotal() {
+                    return parseInt(localStorage.getItem("totalBonus") || "0", 10);
+            }
 
-<script>
-// ✅ 1️⃣ — Referral հղման ստեղծում
-function updateReferralLink() {
-  const currentUser = window.TG_USER || { id: "demo_user" };
-  const referralInput = document.getElementById("referral-link");
-  if (referralInput) {
-    const link = `https://t.me/BirdsGolden_bot/app?startapp=r_${currentUser.id}`;
-    referralInput.value = link;
-  }
+                function setTotal(value) {
+    localStorage.setItem("totalBonus", value);
 }
 
-// ✅ 2️⃣ — Կիսվելու կոճակը (share / copy)
-function shareReferralLink() {
-  const input = document.getElementById("referral-link");
-  const link = input ? input.value : "";
-  if (!link) return alert("Հղումը դեռ չի ստեղծվել։");
+                // Simulate visitor
+            function simulateVisitor() {
+                let total = getTotal();
+                total = 4000;
+                setTotal(total);
+                alert(`🎉 Simulated visitor! +4000 ₸ ստացվեց\n💰 Հիմնական գումար՝ ${total} ₸`);
+            }
 
-  if (navigator.share) {
-    navigator.share({
-      title: "Միացիր BirdsGolden-ին 🐦",
-      text: "Ստացիր 4000 դրամ bonus այս հղումով!",
-      url: link
-    }).catch(() => {
-      navigator.clipboard.writeText(link);
-      alert("📋 Հղումը պատճենվեց clipboard-ում!");
-    });
-  } else {
-    navigator.clipboard.writeText(link);
-    alert("📋 Հղումը պատճենվեց clipboard-ում!");
-  }
-}
+                // Generate referral link
+            function generateReferralLink() {
+                const myId = localStorage.getItem("myId") || Math.floor(Math.random()*1000000);
+                localStorage.setItem("myId", myId);
+                const referralLink = `${window.location.origin}${window.location.pathname}?startapp=r_${myId}`;
+                alert("📩 Ұсыныс сілтемесін көшіріңіз немесе жіберіңіз.:\n" + referralLink);
+            }
 
-// ✅ 3️⃣ — Referral bonus համակարգ
-document.addEventListener("DOMContentLoaded", () => {
-  updateReferralLink();
+               // Աշխատեցնելու համար պետք է համապատասխան կոճակները լինեն HTML-ում
+                document.addEventListener("DOMContentLoaded", () => {
+                const simulateBtn = document.getElementById("simulate-visitor");
+                const inviteBtn = document.getElementById("invite-btn");
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const startParam = urlParams.get("startapp");
-
-  if (startParam && startParam.startsWith("r_")) {
-    const referrerId = startParam.replace("r_", "");
-    const currentUser = window.TG_USER || { id: "demo_user" };
-    const currentKey = `richlab_balance_${currentUser.id}`;
-    const referrerKey = `richlab_balance_${referrerId}`;
-    const hasReceived = localStorage.getItem("referralBonusReceived_" + currentUser.id);
-
-    if (!hasReceived) {
-      // 💰 Նոր օգտատերը ստանում է 4000 դրամ
-      let userBalance = parseInt(localStorage.getItem(currentKey) || "0");
-      userBalance += 4000;
-      localStorage.setItem(currentKey, userBalance);
-
-      // 💰 Հրավիրողն էլ ստանում է 4000 դրամ
-      let referrerBalance = parseInt(localStorage.getItem(referrerKey) || "0");
-      referrerBalance += 4000;
-      localStorage.setItem(referrerKey, referrerBalance);
-
-      localStorage.setItem("referralBonusReceived_" + currentUser.id, "true");
-
-      // 🎉 Գեղեցիկ popup շնորհակալություն հաղորդագրությամբ
-      const overlay = document.createElement("div");
-      overlay.style = `
-        position:fixed;top:0;left:0;width:100%;height:100%;
-        background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;
-        z-index:9999;
-      `;
-      overlay.innerHTML = `
-        <div style="background:white;border-radius:16px;padding:24px;text-align:center;
-                    box-shadow:0 4px 20px rgba(0,0,0,0.3);max-width:320px;">
-          <h3 style="color:#16a34a;font-weight:bold;margin-bottom:8px;">🎉 Շնորհակալություն!</h3>
-          <p style="margin-bottom:10px;">Դուք ստացաք <strong>4000 դրամ bonus</strong>։</p>
-          <p style="color:#10b981;font-size:14px;">💸 Ձեր հրավիրողն էլ ստացավ 4000 դրամ։</p>
-          <button id="ref-close" style="
-            margin-top:15px;background:#10b981;color:white;
-            font-weight:bold;padding:8px 16px;border:none;
-            border-radius:8px;cursor:pointer;">Լավ</button>
-        </div>
-      `;
-      document.body.appendChild(overlay);
-
-      document.getElementById("ref-close").addEventListener("click", () => {
-        document.body.removeChild(overlay);
-        if (typeof updateBalanceDisplay === "function") updateBalanceDisplay();
-      });
-    }
-  }
-});
-</script>
-
+                if(simulateBtn) simulateBtn.addEventListener("click", simulateVisitor);
+                if(inviteBtn) inviteBtn.addEventListener("click", generateReferralLink);
+           });
+        </script>
 
 
 
                 <!-- Benefits Section -->
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-4">
-                    <h4 class="font-bold mb-3">Բացեք հսկայական եկամտի ներուժը հաշվետվություններով:</h4>
+                    <h4 class="font-bold mb-3">Есептермен үлкен табыс әлеуетін ашыңыз:</h4>
                     <p class="text-sm opacity-90 mb-3">
-                        Ընդլայնեք Ձեր եկամտի հորիզոնները RichLab-ով՝ հաշվետվություն կատարելով Ձեր ընկերներին, ընտանիքին կամ հետևորդներին մեր հարթակ: Ահա, թե ինչ եք ստանում:
+                        Біздің платформадағы достарыңызға, отбасыңызға немесе ізбасарларыңызға есеп беру арқылы RichLab арқылы табыс көкжиегіңізді кеңейтіңіз. Міне, сіз мыналарды аласыз:
                     </p>
                     <div class="space-y-2">
                         <div class="flex items-center space-x-2">
                             <span class="text-yellow-300">💰</span>
-                            <span class="text-sm">Վաստակեք լրացուցիչ ֏4,000 յուրաքանչյուր հաջող գրանցման համար:</span>
+                            <span class="text-sm">Әрбір сәтті тіркелу үшін қосымша 4000₸ алыңыз.</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <span class="text-green-300">📈</span>
-                            <span class="text-sm">Եթե Ձեր հրավիրած օգտատերը գումար է վաստակում, Դուք նույնպես ստանում եք այդ գումարի 10%-ը որպես պարգև:</span>
+                            <span class="text-sm">Егер сіз шақырған пайдаланушы ақша тапса, сіз сол соманың 10%-ын сыйақы ретінде аласыз.:</span>
                         </div>
                     </div>
                 </div>
@@ -1096,11 +1023,11 @@ document.addEventListener("DOMContentLoaded", () => {
                
                 <!-- Referrals List -->
                 <div class="bg-white border border-gray-200 rounded-lg p-4">
-                    <h4 class="font-semibold mb-3">Ձեր հաշվետվություններ</h4>
+                    <h4 class="font-semibold mb-3">Сіздің есептеріңіз</h4>
                     <div class="text-center py-8 text-gray-500">
                         <div class="text-4xl mb-2">👥</div>
-                        <div class="font-medium">Հաշվետվություններ չկան</div>
-                        <div class="text-sm">Այս պահին ոչ ոք չի գրանցվել Ձեր հղումով:</div>
+                        <div class="font-medium">Есептер жоқ</div>
+                        <div class="text-sm">Қазіргі уақытта сіздің сілтемеңізге ешкім тіркелген жоқ.</div>
                     </div>
                 </div>
             </div>
@@ -1108,17 +1035,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- Center Section -->
         <div id="center-section" class="section-content" style="display: none;">
             <div class="section-card mb-6">
-                <h3 class="text-xl font-bold mb-4">Առաջադրանքների Կենտրոն</h3>
+                <h3 class="text-xl font-bold mb-4">Тапсырмалар орталығы</h3>
                 
                 <!-- Progress Summary -->
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg mb-4">
                     <div class="flex items-center justify-between mb-3">
                         <div>
-                            <h4 class="font-bold">Ավարտված: <span id="completed-tasks-count">0</span></h4>
-                            <p class="text-sm opacity-90">Ընդհանուր վաստակած</p>
+                            <h4 class="font-bold">Аяқталған: <span id="completed-tasks-count">0</span></h4>
+                            <p class="text-sm opacity-90">Жалпы табыс</p>
                         </div>
                         <div class="text-right">
-                            <div class="text-2xl font-bold" id="total-task-earnings">֏0</div>
+                            <div class="text-2xl font-bold" id="total-task-earnings">₸0</div>
                             <div class="text-xs opacity-75">Tips</div>
                         </div>
                     </div>
@@ -1130,7 +1057,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="text-blue-500 text-xl">💡</div>
                         <div>
                             <p class="text-sm text-blue-700">
-                                Առաջարկների տարածքը այն վայրն է, որտեղ Դուք կարող եք գտնել տարբեր հավելվածների և հարցումների առաջարկներ, որոնք կարող եք կատարել գումար վաստակելու համար:
+                                «Ұсыныстар» бөлімінде сіз ақша табу үшін толтыра алатын әртүрлі қолданбалар мен сауалнамаларға арналған ұсыныстарды таба аласыз.
                             </p>
                         </div>
                     </div>
@@ -1146,13 +1073,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎮</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Experience the application</h5>
-                                    <p class="text-sm text-gray-600">play at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">кем дегенде 5 минут ойнаңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(1, 2000, 'Experience the application')" class="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1165,13 +1092,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎯</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Іс-шараларға қатысу</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(2, 2000, 'Participate in activities')" class="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1184,13 +1111,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">📱</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(3, 2000, 'Participate in activities')" class="bg-purple-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1203,13 +1130,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎪</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(4, 2000, 'Participate in activities')" class="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1222,13 +1149,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎨</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(5, 2000, 'Participate in activities')" class="bg-red-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1241,13 +1168,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🏃</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(6, 2000, 'Participate in activities')" class="bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1260,13 +1187,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎵</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(7, 2000, 'Participate in activities')" class="bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1279,13 +1206,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎲</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">play at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(8, 2000, 'Participate in activities')" class="bg-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1298,13 +1225,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎪</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(9, 2000, 'Participate in activities')" class="bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1317,13 +1244,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">📊</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Complete the survey</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(10, 2000, 'Complete the survey')" class="bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-cyan-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1336,13 +1263,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎮</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Try new game</h5>
-                                    <p class="text-sm text-gray-600">play at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Жаңа ойынды сынап көріңіз</h5>
+                                    <p class="text-sm text-gray-600">кем дегенде 5 минут ойнаңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(11, 2000, 'Try new game')" class="bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1355,13 +1282,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="text-lg">🎯</span>
                                 </div>
                                 <div>
-                                    <h5 class="font-semibold text-gray-800">Participate in activities</h5>
-                                    <p class="text-sm text-gray-600">Use for at least 5 minutes</p>
-                                    <p class="text-green-600 font-bold text-sm">Դուք կստանաք ֏2,000</p>
+                                    <h5 class="font-semibold text-gray-800">Қолданбаны тәжірибеден өткізіңіз</h5>
+                                    <p class="text-sm text-gray-600">Кем дегенде 5 минут қолданыңыз</p>
+                                    <p class="text-green-600 font-bold text-sm">Сіз аласыз ₸2,000</p>
                                 </div>
                             </div>
                             <button onclick="startTask(12, 2000, 'Participate in activities')" class="bg-violet-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-violet-600 transition-colors">
-                                Գնա
+                                Бару
                             </button>
                         </div>
                     </div>
@@ -1369,7 +1296,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <!-- Completed Tasks Section -->
                 <div id="completed-tasks-section" class="mt-6" style="display: none;">
-                    <h4 class="font-semibold text-gray-800 mb-3">Ավարտված առաջադրանքներ</h4>
+                    <h4 class="font-semibold text-gray-800 mb-3">Орындалған тапсырмалар</h4>
                     <div id="completed-tasks-list" class="space-y-2">
                         <!-- Completed tasks will be added here -->
                     </div>
@@ -1380,29 +1307,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Video Section -->
         <div id="video-section" class="section-content" style="display: none;">
             <div class="section-card mb-6">
-                <h3 class="text-xl font-bold mb-4">Տեսանյութերի Կենտրոն</h3>
+                <h3 class="text-xl font-bold mb-4">Бейне орталығы</h3>
                 
                 <!-- Info Card -->
                 <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white p-4 rounded-lg mb-4">
-                    <h4 class="font-bold mb-2">Դիտեք և վաստակեք</h4>
+                    <h4 class="font-bold mb-2">Көріп, табыс табыңыз</h4>
                     <p class="text-sm opacity-90 mb-3">
-                        Հաշվետվություններով առաջարկվող յուրաքանչյուր տեսանյութ կարելի է դիտել, և տեսանյութը դիտելիս Դուք կստանաք համապատասխան հաշվարկ:
+                       Есептер ұсынған әрбір бейнені көруге болады, және сіз бейнені көрген кезде тиісті санын аласыз.
                     </p>
                     <div class="bg-white/20 p-2 rounded text-center">
-                        <span class="text-sm font-medium">⏰ Օգտատերերի թվի պատճառով յուրաքանչյուր օգտատեր կարող է օրական դիտել միայն 3 տեսանյութ:</span>
+                        <span class="text-sm font-medium">⏰ Пайдаланушылар санына байланысты әр пайдаланушы күніне тек 3 бейнені көре алады.</span>
                     </div>
                 </div>
 
                 <!-- Daily Progress -->
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                     <div class="flex items-center justify-between mb-2">
-                        <h4 class="font-semibold text-blue-800">Այսօրվա առաջընթաց</h4>
+                        <h4 class="font-semibold text-blue-800">Бүгінгі жетістіктер</h4>
                         <span class="text-blue-600 font-bold" id="daily-videos-count">0/3</span>
                     </div>
                     <div class="w-full bg-blue-200 rounded-full h-3">
                         <div class="bg-blue-500 h-3 rounded-full transition-all duration-300" id="daily-videos-bar" style="width: 0%"></div>
                     </div>
-                    <p class="text-xs text-blue-600 mt-2">Վաստակած այսօր: <span id="daily-earnings">֏0</span></p>
+                    <p class="text-xs text-blue-600 mt-2">Бүгін табыс таптым. <span id="daily-earnings">֏0</span></p>
                 </div>
 
                 <!-- Available Videos -->
@@ -1413,16 +1340,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="text-lg">▶️</span>
                             </div>
                             <div class="flex-1">
-                                <h5 class="font-semibold">Ինչպես վաստակել առցանց</h5>
-                                <p class="text-sm text-gray-600">Դիտեք և վաստակեք</p>
+                                <h5 class="font-semibold">Интернетте қалай ақша табуға болады</h5>
+                                <p class="text-sm text-gray-600">Көріп, табыс табыңыз</p>
                                 <div class="flex items-center space-x-2 mt-1">
-                                    <span class="text-green-600 font-bold text-sm">+֏2,300</span>
-                                    <span class="text-xs text-gray-500">• 5 րոպե</span>
+                                    <span class="text-green-600 font-bold text-sm">+₸2,300</span>
+                                    <span class="text-xs text-gray-500">• 5 минут</span>
                                 </div>
                             </div>
                         </div>
                         <button onclick="watchVideoEarn('https://www.youtube.com/watch?v=iHwGlm0BSGc', 1, 2300)" class="w-full bg-red-500 text-white py-2 rounded-lg font-medium hover:bg-red-600 transition-colors">
-                            Վաստակել ֏2,300
+                            Табыс табу ₸2,300
                         </button>
                     </div>
 
@@ -1432,16 +1359,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="text-lg">📱</span>
                             </div>
                             <div class="flex-1">
-                                <h5 class="font-semibold">Մոբայլ հավելվածներ</h5>
-                                <p class="text-sm text-gray-600">Լավագույն հավելվածները</p>
+                                <h5 class="font-semibold">Мобильді қосымшалар</h5>
+                                <p class="text-sm text-gray-600">Ең үздік қолданбалар</p>
                                 <div class="flex items-center space-x-2 mt-1">
-                                    <span class="text-green-600 font-bold text-sm">+֏2,300</span>
-                                    <span class="text-xs text-gray-500">• 4 րոպե</span>
+                                    <span class="text-green-600 font-bold text-sm">+₸2,300</span>
+                                    <span class="text-xs text-gray-500">• 4 минут</span>
                                 </div>
                             </div>
                         </div>
                         <button onclick="watchVideoEarn('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 2, 2300)" class="w-full bg-green-500 text-white py-2 rounded-lg font-medium hover:bg-green-600 transition-colors">
-                            Վաստակել ֏2,300
+                            Табыс табу ₸2,300
                         </button>
                     </div>
 
@@ -1451,23 +1378,23 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="text-lg">💰</span>
                             </div>
                             <div class="flex-1">
-                                <h5 class="font-semibold">Ֆինանսական խորհուրդներ</h5>
-                                <p class="text-sm text-gray-600">Գումար խնայելու եղանակներ</p>
+                                <h5 class="font-semibold">Қаржылық кеңес</h5>
+                                <p class="text-sm text-gray-600">Ақшаны үнемдеудің жолдары</p>
                                 <div class="flex items-center space-x-2 mt-1">
-                                    <span class="text-green-600 font-bold text-sm">+֏2,300</span>
-                                    <span class="text-xs text-gray-500">• 6 րոպե</span>
+                                    <span class="text-green-600 font-bold text-sm">+₸2,300</span>
+                                    <span class="text-xs text-gray-500">• 6 минут</span>
                                 </div>
                             </div>
                         </div>
                         <button onclick="watchVideoEarn('https://www.youtube.com/watch?v=oHg5SJYRHA0', 3, 2300)" class="w-full bg-purple-500 text-white py-2 rounded-lg font-medium hover:bg-purple-600 transition-colors">
-                            Վաստակել ֏2,300
+                             Табыс табу ₸2,300
                         </button>
                     </div>
                 </div>
 
                 <!-- Completed Videos Today -->
                 <div id="completed-videos" class="mt-6" style="display: none;">
-                    <h4 class="font-semibold text-gray-800 mb-3">Այսօր դիտված տեսանյութեր</h4>
+                    <h4 class="font-semibold text-gray-800 mb-3">Бүгін көрілген бейнелер</h4>
                     <div id="completed-videos-list" class="space-y-2">
                         <!-- Completed videos will be added here -->
                     </div>
@@ -1478,25 +1405,25 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Cash Section -->
         <div id="cash-section" class="section-content" style="display: none;">
             <div class="section-card mb-6">
-                <h3 class="text-xl font-bold mb-4">Կանխիկ</h3>
+                <h3 class="text-xl font-bold mb-4">Қолма-қол ақша</h3>
                 
                 <!-- Current Balance -->
                 <div class="bg-gradient-to-r from-green-400 to-green-600 text-white p-6 rounded-lg text-center mb-6">
-                    <h4 class="text-lg font-semibold mb-2">Ընթացիկ մնացորդ</h4>
-                    <div class="text-3xl font-bold" id="cash-balance">֏0</div>
+                    <h4 class="text-lg font-semibold mb-2">Ағымдағы баланс</h4>
+                    <div class="text-3xl font-bold" id="cash-balance">₸0</div>
                     <div class="flex space-x-2 mt-3">
                         <button onclick="showDepositModal()" class="flex-1 bg-white/20 text-white px-4 py-2 rounded-lg text-sm">
-                            + Ավելացնել
+                            + Қосу
                         </button>
                         <button onclick="showWithdrawModal()" class="flex-1 bg-white/20 text-white px-4 py-2 rounded-lg text-sm">
-                            ↗ Ելքագրել
+                            ↗ Шығу
                         </button>
                     </div>
                 </div>
 
                 <!-- Crypto Balances -->
                 <div class="mb-6">
-                    <h4 class="font-semibold text-gray-800 mb-3">Կրիպտո մնացորդներ</h4>
+                    <h4 class="font-semibold text-gray-800 mb-3">Криптовалюта баланстары</h4>
                     <div class="space-y-3">
                         <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                             <div class="flex items-center justify-between">
@@ -1536,26 +1463,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <!-- Transaction History -->
                 <div class="mb-6">
-                    <h4 class="font-semibold text-gray-800 mb-3">Գործարքների պատմություն</h4>
+                    <h4 class="font-semibold text-gray-800 mb-3">Транзакция тарихы</h4>
                     <div id="transaction-history" class="space-y-3">
                         <div class="text-center py-8 text-gray-500">
                             <div class="text-4xl mb-2">📄</div>
-                            <div class="font-medium">Գործարքներ չկան</div>
-                            <div class="text-sm">Ձեր բոլոր գործարքները կցուցադրվեն այստեղ</div>
+                            <div class="font-medium">Транзакциялар жоқ</div>
+                            <div class="text-sm">Барлық транзакцияларыңыз осында көрсетіледі.</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Withdrawal Requirements -->
                 <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
-                    <h4 class="font-semibold text-orange-800 mb-3">Ելքագրման պահանջներ</h4>
+                    <h4 class="font-semibold text-orange-800 mb-3">Шығу талаптары</h4>
                     <p class="text-sm text-orange-700 mb-4">
-                        Ելքագրման համար անհրաժեշտ է նվազագույնը ֏125,000 մնացորդ և 15 աշխատանքային օր:
+                        Ақшаны алу үшін кемінде 125 000 ₸ және 15 жұмыс күні қажет.
                     </p>
                     
                     <div class="mb-4">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-sm font-medium text-orange-800">💰 Մնացորդ</span>
+                            <span class="text-sm font-medium text-orange-800">💰 Қалдық</span>
                             <span class="text-sm text-orange-700" id="withdrawal-progress">0/125000</span>
                         </div>
                         <div class="w-full bg-orange-200 rounded-full h-3">
@@ -1565,7 +1492,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     <div class="mb-4">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-sm font-medium text-orange-800">📅 Աշխատանքային օրեր</span>
+                            <span class="text-sm font-medium text-orange-800">📅 Жұмыс күндері</span>
                             <span class="text-sm text-orange-700" id="work-days-progress">0/15</span>
                         </div>
                         <div class="w-full bg-orange-200 rounded-full h-3">
@@ -1582,7 +1509,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="bg-white rounded-2xl max-w-md w-full max-h-[90%] overflow-y-auto popup-content">
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-gray-200">
-                <h3 class="text-lg font-bold text-gray-800"click>Ավելացնել գումար</h3>
+                <h3 class="text-lg font-bold text-gray-800"click>Ақша қосу</h3>
                 <button onclick="closeDepositModal()" class="text-gray-500 hover:text-gray-700">
                     <span class="text-xl">✕</span>
                 </button>
@@ -1629,11 +1556,11 @@ document.addEventListener("DOMContentLoaded", () => {
 <main class="container mx-auto px-4 py-8 max-w-md">
   <div class="card-container bg-white rounded-2xl shadow-xl overflow-hidden">
     <div class="animated-bg p-6 text-white text-center">
-      <h1 id="main-title" class="animated-title text-2xl font-bold mb-2">Կրիպտո Ավանդ</h1>
-      <p class="text-blue-100">Ընտրեք ձեր նախընտրած արժույթը</p>
+      <h1 id="main-title" class="animated-title text-2xl font-bold mb-2">Крипто депозиті</h1>
+      <p class="text-blue-100">Қалаған валютаңызды таңдаңыз</p>
     </div>
     <div class="p-6 border-b border-gray-100">
-      <label class="block text-sm font-medium text-gray-700 mb-3">Ավելացնել այստեղ</label>
+      <label class="block text-sm font-medium text-gray-700 mb-3">Осы жерге қосыңыз</label>
       <div class="space-y-2">
         <div class="network-option bg-gray-50 p-3 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-200">
           <div class="flex items-center justify-between">
@@ -1647,15 +1574,15 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
     <div class="p-6 border-b border-gray-100">
-      <label class="block text-sm font-medium text-gray-700 mb-3">Ընտրեք մետաղադրամի ցանցը</label>
+      <label class="block text-sm font-medium text-gray-700 mb-3">Монета желісін таңдаңыз</label>
       <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         <option>DASH Network</option>
       </select>
     </div>
     <div class="bonus-container p-6 bg-gradient-to-r from-yellow-50 to-amber-50 border-b border-gray-100">
       <div class="text-center">
-        <div class="inline-flex items-center bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mb-2">🎁 Բոնուս</div>
-        <p id="bonus-text" class="text-yellow-700 font-medium">Ստացեք լրացուցիչ 300% բոնուս 0.3967683 DASH նվազագույն ավանդի դեպքում</p>
+        <div class="inline-flex items-center bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mb-2">🎁 Бонус</div>
+        <p id="bonus-text" class="text-yellow-700 font-medium">0.3967683 DASH ең аз депозитімен қосымша 300% бонус алыңыз</p>
       </div>
     </div>
     <div class="p-6 text-center border-b border-gray-100">
@@ -1665,10 +1592,10 @@ document.addEventListener("DOMContentLoaded", () => {
           class="w-full h-full object-cover rounded-lg"
           onerror="this.src=''; this.alt='QR Code failed to load'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'qr-code w-full h-full flex items-center justify-center\'><div class=\'text-center\'><div class=\'text-4xl mb-2\'>📱</div><div class=\'text-sm text-gray-600\'>QR Code</div></div></div>';">
       </div>
-      <p class="text-sm text-gray-600">Սկանավորեք QR կոդը ձեր դրամապանակով</p>
+      <p class="text-sm text-gray-600">QR кодын әмияныңызбен сканерлеңіз</p>
     </div>
     <div class="p-6">
-      <label class="block text-sm font-medium text-gray-700 mb-3">Լիցքավորման հասցե</label>
+      <label class="block text-sm font-medium text-gray-700 mb-3">Қайта зарядтау мекенжайы</label>
       <div class="bg-gray-50 p-4 rounded-lg border">
         <div class="flex items-center justify-between">
           <code id="wallet-address" class="wallet-address text-sm font-mono text-gray-800 break-all">XdW2GWqqzrRAw21MA6voyhRxy8bF7fQVP6</code>
@@ -1679,25 +1606,25 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="flex items-start space-x-2">
           <div class="text-yellow-600 mt-0.5">⚠️</div>
           <div class="text-sm text-yellow-800">
-            <p id="minimum-amount">Հասցեին ուղարկեք միայն DASH: 0.15 DASH-ից ցածր փոխանցումները չեն հաշվարկվի։</p>
+            <p id="minimum-amount">Мекенжайға тек DASH жіберіңіз. 0.15 DASH-тан төмен аударымдар есептелмейді.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="p-6 bg-gray-50">
-      <h3 class="font-medium text-gray-900 mb-3">Ինչպես լիցքավորել կրիպտոարժույթ?</h3>
+      <h3 class="font-medium text-gray-900 mb-3">Криптовалютаны қалай толықтыруға болады?</h3>
       <ol class="space-y-2 text-sm text-gray-600">
-        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span> <span>Պատճենեք վերևի հասցեն</span></li>
-        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span> <span>Բացեք ձեր DASH դրամապանակը</span></li>
-        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span> <span>Ուղարկեք նվազագույնը 0.15 DASH</span></li>
-        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span> <span>Սպասեք հաստատմանը</span></li>
+        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span> <span>Жоғарыдағы мекенжайды көшіріңіз.</span></li>
+        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span> <span>DASH әмияныңызды ашыңыз</span></li>
+        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span> <span>Кемінде 0,15 DASH жіберіңіз</span></li>
+        <li class="flex items-start space-x-2"><span class="step-number bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span> <span>Растауды күтіңіз.</span></li>
       </ol>
     </div>
   </div>
   <div id="status-message" class="status-pulse mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center text-blue-800 hidden">
     <div class="flex items-center justify-center space-x-2">
       <div class="animate-spin w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full"></div>
-      <span>Սպասում ենք գործարքին...</span>
+      <span>Келісімді күтіп отырмыз...</span>
     </div>
   </div>
   <div id="blockchain-info" class="mt-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
@@ -1735,6 +1662,7 @@ setInterval(updateBlockchainData,30000);
 </body>
 </html>
 
+                                           
                 <!-- Amount Input -->
                 <div class="mb-6">
                     <label for="deposit-amount" class="block text-sm font-medium text-gray-700 mb-2">
@@ -1748,7 +1676,7 @@ setInterval(updateBlockchainData,30000);
                         step="100"
                         class="w-full px-3 py-3 border border-gray-300 rounded-lg text-lg font-medium"
                     >
-                    <p class="text-xs text-gray-500 mt-1">Նվազագույնը ֏3,000</p>
+                    <p class="text-xs text-gray-500 mt-1">Նվազագույնը ֏1,800</p>
                 </div>
 
                 <!-- Payment Details -->
@@ -1774,7 +1702,7 @@ setInterval(updateBlockchainData,30000);
         <div class="bg-white rounded-2xl max-w-md w-full max-h-[90%] overflow-y-auto popup-content">
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-gray-200">
-                <h3 class="text-lg font-bold text-gray-800">Ելքագրել գումար</h3>
+                <h3 class="text-lg font-bold text-gray-800">Ақшаны алу</h3>
                 <button onclick="closeWithdrawModal()" class="text-gray-500 hover:text-gray-700">
                     <span class="text-xl">✕</span>
                 </button>
@@ -1785,15 +1713,15 @@ setInterval(updateBlockchainData,30000);
                 <!-- Current Balance -->
                 <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                     <div class="text-center">
-                        <h4 class="font-semibold text-green-800 mb-1">Հասանելի մնացորդ</h4>
-                        <div class="text-2xl font-bold text-green-600" id="withdraw-available-balance">֏0</div>
+                        <h4 class="font-semibold text-green-800 mb-1">Қолжетімді баланс</h4>
+                        <div class="text-2xl font-bold text-green-600" id="withdraw-available-balance">₸0</div>
                     </div>
                 </div>
 
                 <!-- Withdrawal Methods -->
                 <div class="mb-6">
-                    <h4 class="font-semibold text-gray-800 mb-3">Ընտրեք ելքագրման եղանակը</h4>
-                    <p class="alert-text">⚠️ Դեպոզիտ չարած օգտատերերը չեն կարող կատարել withdrawal ձեր պրոֆիլը ակտիվ չի</p>
+                    <h4 class="font-semibold text-gray-800 mb-3">Касса әдісін таңдаңыз</h4>
+                    <p class="alert-text">⚠️ Депозит салмаған пайдаланушылар ақша ала алмайды. Сіздің профиліңіз белсенді емес.</p>
 
                     <style>
                     .alert-text {
@@ -1829,19 +1757,19 @@ setInterval(updateBlockchainData,30000);
                                         <h5 class="font-black text-xl text-slate-800 linen-text-wave">DASH</h5>
                                         <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">PRO</div>
                                     </div>
-                                    <p class="text-sm text-slate-600 font-semibold mb-2">Պրոֆեսիոնալ ելքագրման համակարգ</p>
+                                    <p class="text-sm text-slate-600 font-semibold mb-2">Кәсіби касса жүйесі</p>
                                     <div class="flex items-center space-x-3">
                                         <div class="flex items-center space-x-1">
                                             <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                            <span class="text-xs text-green-700 font-bold">Ակնթարթային</span>
+                                            <span class="text-xs text-green-700 font-bold">Лезде</span>
                                         </div>
                                         <div class="flex items-center space-x-1">
                                             <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                                            <span class="text-xs text-blue-700 font-bold">Անվտանգ</span>
+                                            <span class="text-xs text-blue-700 font-bold">Қауіпсіз</span>
                                         </div>
                                         <div class="flex items-center space-x-1">
                                             <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                                            <span class="text-xs text-purple-700 font-bold">Պրեմիում</span>
+                                            <span class="text-xs text-purple-700 font-bold">Премиум</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1849,111 +1777,96 @@ setInterval(updateBlockchainData,30000);
                                     <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white text-sm font-bold px-3 py-2 rounded-xl shadow-lg mb-2">
                                         <div class="flex items-center space-x-1">
                                             <span>🚀</span>
-                                            <span>Ակտիվ</span>
+                                            <span>Белсенді</span>
                                         </div>
                                     </div>
                                     <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-lg">
-                                        0% Հարկ
+                                        0% Қабат
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- EasyPay -->
-                        <div class="withdraw-method bg-gradient-to-r from-orange-50 to-red-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('easypay')">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/572522863_18069434711352066_1789454711044585815_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzc1Mjc2NTg5NDE5MjYyNTA0NA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjUxMng1MTIuc2RyLkMzIn0%3D&_nc_ohc=xu3NZOoYH3oQ7kNvwEzj2ug&_nc_oc=AdkVNNjhUv7_heXZBZ--UXI4237X7vTDlz4GYRjWwPF230eUcTvr9D51AvjDztIQ7tA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=dnlxv3BSSnbfnb4QOMvIwQ&oh=00_AffLt8L3Npnw8hWnhiCOEu9y8usa4MnRKq0U08lQSqP4Pw&oe=69058A23" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-orange-800">EasyPay</h5>
-                                    <p class="text-sm text-orange-600">Մոբայլ վճարում</p>
-                                </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
-                            </div>
-                        </div>
-
-                        <!-- Idram -->
-                        <div class="withdraw-method bg-gradient-to-r from-purple-50 to-pink-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('idram')">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">                              
-                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/569060404_18069433583352066_1049718359014552009_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzc1Mjc1ODQ0NzUyNDYyNjkzNg%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=bY8yrmlbE60Q7kNvwFInujH&_nc_oc=AdkvBX4yrGp7iu834vSdKnD6W7E0r8or0hkbkqt-n6k4_olScVaCMyy_Lq32dS_a0D8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=swL-2Fd7Or_QCtcCSXJv7g&oh=00_AffrGrHLiT3BR2PzLILgJsnwvv_LUc3haFSmT8vw4pDyRg&oe=690589D5" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-purple-800">Idram</h5>
-                                    <p class="text-sm text-purple-600">Էլեկտրոնային դրամապանակ</p>
-                                </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
-                            </div>
-                        </div>
-
-                        <!-- ArCa -->
-                        <div class="withdraw-method bg-gradient-to-r from-blue-50 to-indigo-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('arca')">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571961131_18069436601352066_1856487096650140951_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzc1Mjc3NzU0NDUwOTUwNjI0Ng%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=BqRzlt2jD48Q7kNvwHh8n0A&_nc_oc=AdkS9yAb8F5oQ_uE-nJnWdmbIUmr93LspGND5J0s75xO0gKFB67CjwV4HVVX9WyNgN8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CQs8Mtoh2jSShUmScOIjxg&oh=00_Afd0jNdRkAhPOmQ1vw4fRC1YRMe_IbtiDQMLamxNd5Gehw&oe=690564CF" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-blue-800">ArCa</h5>
-                                    <p class="text-sm text-blue-600">Հայկական քարտային համակարգ</p>
-                                </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
-                            </div>
-                        </div>
-
-                        <!-- ԱմերիաԲանկ -->
-                        <div class="withdraw-method bg-gradient-to-r from-red-50 to-pink-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('ameriabank')">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/572824761_18069435338352066_3327764639337324449_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzc1Mjc2ODc2NjU0NDI1MDgxNw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=5rfpVgJ9VkQQ7kNvwEjuj_D&_nc_oc=AdkxtF2mew5uUICM2OgFOLAIjQJhQGA25yHbjLDGjNKb4Gp2XfucRv8g3X3vS0whtKA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=SpZ3RF7eV6HH_1nNaKqljg&oh=00_Affs3pdo8EU8NrfEBEbITCewjjlWs-yKF7ElKr5QbT1bzg&oe=69056F8F" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-red-800">ԱմերիաԲանկ</h5>
-                                    <p class="text-sm text-red-600">Բանկային փոխանցում</p>
-                                </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
-                            </div>
-                        </div>
-
-                        <!-- ԱրդշինԲանկ -->
-                        <div class="withdraw-method bg-gradient-to-r from-green-50 to-emerald-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('ardshinbank')">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571500675_18069435530352066_2197785853319983191_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=Mzc1Mjc2OTc3Mzc2NDQxNzUzNA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=pDHgs7phguUQ7kNvwEDKm9_&_nc_oc=AdkvP7TXFWNU1Ck86kUrMfqfnYy1256NX9apTPb_V3zEXAuzdAAES0sL-799jV5SNVw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=bO029RnreaLK-Vc-mxUZAw&oh=00_AfeuP2GlfRYJwXir-oCx9spoBF46VqBQ8Ah9OaOlIRihPg&oe=690576CB" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-green-800">ԱրդշինԲանկ</h5>
-                                    <p class="text-sm text-green-600">Բանկային փոխանցում</p>
-                                </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
-                            </div>
-                        </div>
-
-                        <!-- ԱԿԲԱ Բանկ -->
-                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-orange-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('acba')">
+                        <!-- Crypto SHIBA -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('SHIBA')">
                             <div class="flex items-center space-x-3">
                                 <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/573236719_18069434444352066_1139314237925942194_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc1Mjc2Mjk1NDM1NDYwMDk4Nw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=YCFbhl5GUZ0Q7kNvwGb14XS&_nc_oc=AdlmcmQjOkJHIptWk11BwkKh5MbDbkO8C1dI--IhrB_gMNrZAQwdAypN2o8wxj8r0KQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=mRdwulMrAk9d5SWG90_lRQ&oh=00_AfdL-aA4QQo6TOqat8gXm-EkGRr1HJTchUfyl8zi5r6L6A&oe=690591AF" alt="">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
                                 </div>
                                 <div class="flex-1">
-                                    <h5 class="font-semibold text-yellow-800">ԱԿԲԱ Բանկ</h5>
-                                    <p class="text-sm text-yellow-600">Բանկային փոխանցում</p>
+                                    <h5 class="font-semibold text-yellow-800">SHIBA INU (SHIBA)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
                                 </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
                             </div>
                         </div>
 
-                        <!-- Կոնվերս Բանկ -->
-                        <div class="withdraw-method bg-gradient-to-r from-indigo-50 to-purple-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('converse')">
+                        <!-- Crypto DOGE -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('DOGE')">
                             <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                                    <img src="https://scontent.cdninstagram.com/v/t51.82787-15/572754861_18069433331352066_6048563008609679232_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=Mzc1Mjc1NjQ0ODA1Nzk2ODAwMA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMHgzMjAuc2RyLkMzIn0%3D&_nc_ohc=cWBsfvW9Ge4Q7kNvwFmoQ8d&_nc_oc=Adm2fIH54FBfMYdgyNPbg7tWCbpqRd_95WYTKrUGLI1Drc6UdIUVVh5U6QA62YlwQGo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=QQLblAuOjfohmKI7HE9tTw&oh=00_AfeYh8M5CeaoTPiSB1Fmt5YJCwF0XdLKTVtyc0hcBLhdTw&oe=69055903" alt="">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
                                 </div>
                                 <div class="flex-1">
-                                    <h5 class="font-semibold text-indigo-800">Կոնվերս Բանկ</h5>
-                                    <p class="text-sm text-indigo-600">Բանկային փոխանցում</p>
+                                    <h5 class="font-semibold text-yellow-800">DOGECOIN (DOGE)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
                                 </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
+                            </div>
+                        </div>
+                        <!-- Crypto BTTC -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('BTTC')">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-yellow-800">BitTorrent (BTTC)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
+                                </div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
+                            </div>
+                        </div>
+
+                        <!-- Crypto LUNC -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('LUNC')">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-yellow-800">Terra Classic (LUNC)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
+                                </div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
+                            </div>
+                        </div>
+
+                        <!-- Crypto BONK -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('BONK')">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-yellow-800">BONK</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
+                                </div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
+                            </div>
+                        </div>
+
+                        <!-- Crypto ETH -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('ETH')">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-yellow-800">Ethereum (ETH)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
+                                </div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
                             </div>
                         </div>
 
@@ -1965,9 +1878,23 @@ setInterval(updateBlockchainData,30000);
                                 </div>
                                 <div class="flex-1">
                                     <h5 class="font-semibold text-yellow-800">Bitcoin (BTC)</h5>
-                                    <p class="text-sm text-yellow-600">Կրիպտո ելքագրում</p>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
                                 </div>
-                                <div class="text-sm text-green-600 font-medium">Ակտիվ</div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
+                            </div>
+                        </div>
+
+                        <!-- Crypto ETC -->
+                        <div class="withdraw-method bg-gradient-to-r from-yellow-50 to-amber-50 border rounded-lg p-4 cursor-pointer" onclick="selectWithdrawMethod('ETC')">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                   <img src="https://scontent.cdninstagram.com/v/t51.82787-15/571496848_18069433088352066_5109590613382384653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzc1Mjc1Mzk2NjkyNTg1MTI2NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjQ1OXg0NTkuc2RyLkMzIn0%3D&_nc_ohc=Ctt6R-s1EGgQ7kNvwHHswC4&_nc_oc=AdkhQQHILgtR_FXvLMWWgNRAq951LLmCVzVoA63zVoYtBon9wmBIiGMlBzgnwEJ8ILE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=CJIteb99NBsdHoz4n1Rr_g&oh=00_AfcXthEBlMOFv3IXVykb2lmzwI7u--sx_T537Nd4rfCJ5w&oe=6905688C" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-yellow-800">Ethereum Classic (ETC)</h5>
+                                    <p class="text-sm text-yellow-600">Криптовалютаны алу</p>
+                                </div>
+                                <div class="text-sm text-green-600 font-medium">Белсенді</div>
                             </div>
                         </div>
 
@@ -1990,7 +1917,7 @@ setInterval(updateBlockchainData,30000);
                 <!-- Amount Input -->
                 <div class="mb-6">
                     <label for="withdraw-amount" class="block text-sm font-medium text-gray-700 mb-2">
-                        Գումարը (֏)
+                        Саны (₸)
                     </label>
                     <input 
                         type="number" 
@@ -2000,7 +1927,7 @@ setInterval(updateBlockchainData,30000);
                         step="5000"
                         class="w-full px-3 py-3 border border-gray-300 rounded-lg text-lg font-medium"
                    > 
-                    <p class="text-xs text-gray-500 mt-1">Նվազագույնը ֏125,000</p>
+                    <p class="text-xs text-gray-500 mt-1">Минимум ₸125,000</p>
                 </div>
               
                 <!-- Withdrawal Details -->
@@ -2015,7 +1942,7 @@ setInterval(updateBlockchainData,30000);
                 class="w-full bg-red-500 text-white py-3 px-6 rounded-xl font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled
             >
-            Ելքագրել գումար
+            Ақшаны алу
                 </button>
             </div>
         </div>
@@ -2029,10 +1956,10 @@ setInterval(updateBlockchainData,30000);
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                 </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Հաջողություն!</h3>
-            <p class="text-gray-600 mb-4" id="success-message">Գումարը հաջողությամբ ավելացվել է Ձեր հաշվին:</p>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Іске сәт!</h3>
+            <p class="text-gray-600 mb-4" id="success-message">Сома сіздің шотыңызға сәтті қосылды:</p>
             <button onclick="closeSuccessModal()" class="w-full bg-green-500 text-white py-3 px-6 rounded-xl font-bold">
-                Շարունակել
+                Жалғастыру
             </button>
         </div>
     </div>
@@ -2044,27 +1971,27 @@ setInterval(updateBlockchainData,30000);
             
             <button onclick="showHome()" class="nav-btn flex flex-col items-center p-2 text-blue-600 relative transition-all duration-300 ease-out">
                 <span class="text-xl mb-1 transition-transform duration-300 ease-out">🏠</span>
-                <span class="text-xs font-medium">Գլխավոր</span>
+                <span class="text-xs font-medium">Үй</span>
                 <div class="nav-ripple absolute inset-0 rounded-lg"></div>
             </button>
             <button onclick="showInvite()" class="nav-btn flex flex-col items-center p-2 text-gray-500 relative transition-all duration-300 ease-out">
                 <span class="text-xl mb-1 transition-transform duration-300 ease-out">👥</span>
-                <span class="text-xs font-medium">Հրավեր</span>
+                <span class="text-xs font-medium">Шақыру</span>
                 <div class="nav-ripple absolute inset-0 rounded-lg"></div>
             </button>
             <button onclick="showCenter()" class="nav-btn flex flex-col items-center p-2 text-gray-500 relative transition-all duration-300 ease-out">
                 <span class="text-xl mb-1 transition-transform duration-300 ease-out">🎯</span>
-                <span class="text-xs font-medium">Կենտրոն</span>
+                <span class="text-xs font-medium">Орталық</span>
                 <div class="nav-ripple absolute inset-0 rounded-lg"></div>
             </button>
             <button onclick="showVideo()" class="nav-btn flex flex-col items-center p-2 text-gray-500 relative transition-all duration-300 ease-out">
                 <span class="text-xl mb-1 transition-transform duration-300 ease-out">📺</span>
-                <span class="text-xs font-medium">Տեսանյութ</span>
+                <span class="text-xs font-medium">Бейне</span>
                 <div class="nav-ripple absolute inset-0 rounded-lg"></div>
             </button>
             <button onclick="showCash()" class="nav-btn flex flex-col items-center p-2 text-gray-500 relative transition-all duration-300 ease-out">
                 <span class="text-xl mb-1 transition-transform duration-300 ease-out">💰</span>
-                <span class="text-xs font-medium">Կանխիկ</span>
+                <span class="text-xs font-medium">Қолма-қол ақша</span>
                 <div class="nav-ripple absolute inset-0 rounded-lg"></div>
             </button>
         </div>
@@ -2169,7 +2096,7 @@ setInterval(updateBlockchainData,30000);
                 // Give welcome bonus
                 setTimeout(() => {
                     showWelcomeBonus();
-                }, 4000);
+                }, 1000);
             }
         }
 
@@ -2179,17 +2106,17 @@ setInterval(updateBlockchainData,30000);
             welcomeModal.innerHTML = `
                 <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center popup-content">
                     <div class="text-6xl mb-4 animate-bounce">🎉</div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Բարի գալուստ RichLab!</h3>
-                    <p class="text-lg text-green-600 font-bold mb-3">Շնորհավորում ենք ֏8,000 բոնուս!</p>
-                    <p class="text-gray-600 mb-6">Սկսեք վաստակել գումար հիմա՝ կատարելով պարզ առաջադրանքներ</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Қош келдіңіз RichLab!</h3>
+                    <p class="text-lg text-green-600 font-bold mb-3">₸8,000 бонусыңызбен құттықтаймыз!!</p>
+                    <p class="text-gray-600 mb-6">Қарапайым тапсырмаларды орындау арқылы қазір ақша таба бастаңыз</p>
                     
                     <div class="bg-gradient-to-r from-green-400 to-green-600 text-white p-4 rounded-lg mb-6">
-                        <div class="text-3xl font-bold">+֏8,000</div>
-                        <div class="text-sm opacity-90">Բոնուս ավելացվել է</div>
+                        <div class="text-3xl font-bold">+₸8,000</div>
+                        <div class="text-sm opacity-90">Бонус қосылды</div>
                     </div>
                     
                     <button onclick="claimWelcomeBonus()" class="w-full bg-blue-500 text-white py-3 px-6 rounded-xl font-bold text-lg">
-                        Սկսենք! 🚀
+                        Бастайық! 🚀
                     </button>
                 </div>
             `;
@@ -2209,7 +2136,7 @@ setInterval(updateBlockchainData,30000);
                     id: Date.now(),
                     type: 'deposit',
                     amount: 8000,
-                    method: 'Բոնուս',
+                    method: 'Бонус',
                     date: new Date().toISOString(),
                     status: 'completed'
                 });
@@ -2311,9 +2238,9 @@ setInterval(updateBlockchainData,30000);
             localStorage.setItem(`richlab_transactions_${currentUser.id}`, JSON.stringify(transactionHistory));
         }
 
-        function updateTransactionHistory() {
-            const historyDiv = document.getElementById('transaction-history');
-            if (!historyDiv) return;
+        function updateBalanceDisplay() {
+            const formattedBalance = `֏${currentBalance.toLocaleString()}`;
+            
             // Update main balance
             const mainBalance = document.getElementById('main-balance');
             if (mainBalance) {
@@ -2405,8 +2332,8 @@ setInterval(updateBlockchainData,30000);
                                     <span class="${colorClass} font-bold">${icon}</span>
                                 </div>
                                 <div>
-                                    <div class="font-medium">${isDeposit ? 'Ավելացում' : 'Ելքագրում'}</div>
-                                    <div class="text-sm text-gray-600">${tx.method} • ${new Date(tx.date).toLocaleDateString('hy-AM')}</div>
+                                    <div class="font-medium">${isDeposit ? 'Қосу' : 'Шығу'}</div>
+                                    <div class="text-sm text-gray-600">${tx.method} • ${new Date(tx.date).toLocaleDateString('kzt-KZT')}</div>
                                 </div>
                             </div>
                             <div class="${colorClass} font-bold">
@@ -2489,16 +2416,16 @@ setInterval(updateBlockchainData,30000);
             let content = '';
             
             switch(method) {
-                case 'linen':
+                case 'DASH':
                     content = `
                         <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
-                            <h5 class="font-semibold text-teal-800 mb-2">DASH վճարման մանրամասներ</h5>
-                            <p class="text-sm text-teal-700 mb-3">Օգտագործեք DASH հավելվածը կամ կայքը վճարման համար:</p>
+                            <h5 class="font-semibold text-teal-800 mb-2">DASH төлем мәліметтері</h5>
+                            <p class="text-sm text-teal-700 mb-3">Төлем жасау үшін DASH қолданбасын немесе веб-сайтын пайдаланыңыз:</p>
                             <div class="bg-white p-3 rounded border">
-                                <div class="text-sm font-medium text-gray-700">Ստացող:</div>
-                             <div class="text-sm font-medium text-gray-700">Wallet հասցե:</div>
+                                <div class="text-sm font-medium text-gray-700">Алушы:</div>
+                             <div class="text-sm font-medium text-gray-700">Wallet мекенжай:</div>
                                 <div class="text-xs text-gray-900 font-mono break-all">0xC8a18cbD6a8457A3fB88c4B78095E7DA639e8B37</div>
-                                <div class="text-xs text-red-600 mt-2">⚠️ Միայն  DASH  ցանց օգտագործեք</div>
+                                <div class="text-xs text-red-600 mt-2">⚠️Тек DASH желісін пайдаланыңыз</div>
                             </div>
                         </div>
                     `;
@@ -2661,11 +2588,11 @@ setInterval(updateBlockchainData,30000);
                 submitBtn.innerHTML = `
                     <div class="flex items-center justify-center space-x-2">
                         <div class="loading-spinner w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
-                        <span class="linen-text-wave">DASH մշակում...</span>
-                        <span class="linen-icon-bounce">⚡</span>
+                        <span class="DASH-text-wave">DASH даму...</span>
+                        <span class="DASH-icon-bounce">⚡</span>
                     </div>
                 `;
-                submitBtn.classList.add('linen-processing');
+                submitBtn.classList.add('DASH-processing');
             } else {
                 submitBtn.innerHTML = '<div class="loading-spinner w-5 h-5 border-2 border-white border-t-transparent rounded-full mx-auto"></div>';
             }
@@ -2827,20 +2754,15 @@ setInterval(updateBlockchainData,30000);
                         </div>
                     `;
                     break;
-                case 'easypay':
+                case 'DASH':
                     content = `
-                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                            <h5 class="font-semibold text-orange-800 mb-2">EasyPay մանրամասներ</h5>
-                            <p class="text-sm text-orange-700 mb-3">Մուտքագրեք Ձեր EasyPay հաշվի տվյալները:</p>
+                        <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
+                            <h5 class="font-semibold text-teal-800 mb-2">Linen ելքագրման մանրամասներ</h5>
+                            <p class="text-sm text-teal-700 mb-3">Մուտքագրեք Ձեր DASH հաշվի տվյալները:</p>
                             <div class="space-y-3">
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Հեռախոսահամար</label>
-                                    <input type="tel" id="easypay-phone" placeholder="+374-XX-XXX-XXX" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Անուն Ազգանուն</label>
-                                    <input type="text" id="easypay-name" placeholder="Ձեր անունը" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
-                                </div>
+                              <label class="block text-sm font-medium text-gray-700 mb-2">BTC Wallet հասցե</label>
+                                <input type="text" id="btc-address" placeholder="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono">
                             </div>
                         </div>
                     `;
@@ -4574,90 +4496,571 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 }
 </style>
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Contact Form</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        @keyframes subtleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes gentleSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes professionalPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .animate-fade-in {
+            animation: subtleFadeIn 0.6s ease-out;
+        }
+        
+        .animate-slide-in {
+            animation: gentleSlide 0.5s ease-out;
+        }
+        
+        .animate-professional-pulse {
+            animation: professionalPulse 0.2s ease-in-out;
+        }
+        
+        .input-professional {
+            transition: all 0.2s ease;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .input-professional:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            outline: none;
+        }
+        
+        .button-professional {
+            transition: all 0.2s ease;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+        }
+        
+        .button-professional:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .button-professional:active {
+            transform: translateY(0);
+        }
+        
+        .professional-card {
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .success-professional {
+            animation: subtleFadeIn 0.4s ease-out;
+        }
+        
+        .professional-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body class="min-h-full bg-gradient-to-br from-slate-50 to-gray-100 p-4 md:p-8">
+  <main class="max-w-4xl mx-auto"><!-- Professional Header -->
+   <div class="text-center mb-12 animate-fade-in">
+    <div class="mb-8"><img src="https://cdn.sanity.io/images/e422uarq/production/cb1e5286cc56139b67cfe7b6f5ecb66dda9cdc72-192x192.png?w=160&amp;h=160&amp;fm=jpg&amp;fit=crop" alt="Support Logo" class="w-20 h-20 mx-auto rounded-full shadow-lg animate-professional-pulse" onerror="this.src=''; this.alt='Support Logo failed to load'; this.style.display='none';">
+    </div>
+    <h1 id="form-title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">Contact Support</h1>
+    <p id="form-subtitle" class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">We're here to help</p>
+   </div><!-- Professional Contact Form -->
+   <div class="bg-white rounded-3xl professional-shadow professional-card p-8 md:p-12 animate-slide-in">
+    <form id="contact-form" class="space-y-8">
+     <div class="grid md:grid-cols-2 gap-6">
+      <div><label for="name" class="block text-sm font-medium text-gray-900 mb-3">Full Name *</label> <input type="text" id="name" name="name" required class="w-full px-4 py-4 rounded-xl input-professional text-gray-900 placeholder-gray-500" placeholder="John Smith">
+      </div>
+      <div><label for="email" class="block text-sm font-medium text-gray-900 mb-3">Email Address *</label> <input type="email" id="email" name="email" required class="w-full px-4 py-4 rounded-xl input-professional text-gray-900 placeholder-gray-500" placeholder="john@company.com">
+      </div>
+     </div>
+     <div><label for="message" class="block text-sm font-medium text-gray-900 mb-3">How can we help you? *</label> <textarea id="message" name="message" rows="6" required class="w-full px-4 py-4 rounded-xl input-professional text-gray-900 placeholder-gray-500 resize-none" placeholder="Please provide details about your inquiry or issue..."></textarea>
+     </div>
+     <div class="pt-4"><button type="submit" id="submit-btn" class="w-full md:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl button-professional disabled:opacity-50 disabled:cursor-not-allowed min-w-[200px]"> <span id="submit-text">Send Message</span> <span id="loading-spinner" class="hidden ml-2">
+        <svg class="animate-spin h-5 w-5 inline" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg></span> </button>
+     </div>
+    </form><!-- Professional Success Message -->
+    <div id="success-message" class="hidden mt-8 p-6 bg-green-50 border border-green-200 text-green-800 rounded-2xl success-professional">
+     <div class="flex items-center">
+      <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
+       <svg class="w-5 h-5 text-green-600" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+       </svg>
+      </div>
+      <div>
+       <h4 class="font-semibold text-green-900">Message Sent Successfully</h4>
+       <p id="success-text" class="text-sm text-green-700 mt-1">Thank you! We'll get back to you soon.</p>
+      </div>
+     </div>
+    </div>
+   </div><!-- Professional Recent Messages -->
+   <div id="recent-messages" class="mt-12 bg-white rounded-3xl professional-shadow professional-card p-8 md:p-12 hidden">
+    <div class="flex items-center mb-8">
+     <div class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
+      <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+     </div>
+     <h3 class="text-2xl font-bold text-gray-900">Recent Messages</h3>
+    </div>
+    <div id="messages-list" class="space-y-4"></div>
+   </div>
+  </main>
+  <script>
+        // Professional configuration
+        const defaultConfig = {
+            form_title: "Contact Support",
+            form_subtitle: "We're here to help",
+            submit_button_text: "Send Message",
+            success_message: "Thank you! We'll get back to you soon.",
+            primary_color: "#2563eb",
+            surface_color: "#ffffff",
+            text_color: "#111827",
+            accent_color: "#059669",
+            background_color: "#f8fafc"
+        };
+
+        let currentMessages = [];
+
+        // Data SDK handler
+        const dataHandler = {
+            onDataChanged(data) {
+                currentMessages = data;
+                updateMessagesDisplay();
+            }
+        };
+
+        // Element SDK configuration
+        async function onConfigChange(config) {
+            // Update text content
+            document.getElementById('form-title').textContent = config.form_title || defaultConfig.form_title;
+            document.getElementById('form-subtitle').textContent = config.form_subtitle || defaultConfig.form_subtitle;
+            document.getElementById('submit-text').textContent = config.submit_button_text || defaultConfig.submit_button_text;
+            document.getElementById('success-text').textContent = config.success_message || defaultConfig.success_message;
+
+            // Update colors
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+
+            document.body.style.background = `linear-gradient(to bottom right, ${backgroundColor}, ${primaryColor}20)`;
+            document.querySelector('.bg-white').style.backgroundColor = surfaceColor;
+            document.getElementById('form-title').style.color = textColor;
+            document.getElementById('form-subtitle').style.color = textColor;
+            document.getElementById('submit-btn').style.backgroundColor = primaryColor;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            config.primary_color = value;
+                            window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.surface_color || defaultConfig.surface_color,
+                        set: (value) => {
+                            config.surface_color = value;
+                            window.elementSdk.setConfig({ surface_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            config.background_color = value;
+                            window.elementSdk.setConfig({ background_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["form_title", config.form_title || defaultConfig.form_title],
+                ["form_subtitle", config.form_subtitle || defaultConfig.form_subtitle],
+                ["submit_button_text", config.submit_button_text || defaultConfig.submit_button_text],
+                ["success_message", config.success_message || defaultConfig.success_message]
+            ]);
+        }
+
+        // Initialize SDKs
+        async function initializeApp() {
+            try {
+                // Initialize Data SDK
+                const dataResult = await window.dataSdk.init(dataHandler);
+                if (!dataResult.isOk) {
+                    console.error("Failed to initialize data SDK");
+                }
+
+                // Initialize Element SDK
+                if (window.elementSdk) {
+                    await window.elementSdk.init({
+                        defaultConfig,
+                        onConfigChange,
+                        mapToCapabilities,
+                        mapToEditPanelValues
+                    });
+                }
+            } catch (error) {
+                console.error("Failed to initialize SDKs:", error);
+            }
+        }
+
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (currentMessages.length >= 999) {
+                showError("Maximum limit of 999 messages reached. Please contact support directly.");
+                return;
+            }
+
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            
+            // Add click animation
+            submitBtn.classList.add('animate-pulse-click');
+            setTimeout(() => submitBtn.classList.remove('animate-pulse-click'), 300);
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            
+            try {
+                const formData = new FormData(this);
+                const messageData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    message: formData.get('message'),
+                    submitted_at: new Date().toISOString()
+                };
+                
+                const result = await window.dataSdk.create(messageData);
+                
+                if (result.isOk) {
+                    // Show success message
+                    document.getElementById('success-message').classList.remove('hidden');
+                    this.reset();
+                    
+                    // Add success animation to form
+                    document.querySelector('.bg-white').classList.add('animate-bounce-click');
+                    setTimeout(() => {
+                        document.querySelector('.bg-white').classList.remove('animate-bounce-click');
+                    }, 600);
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('success-message').classList.add('hidden');
+                    }, 5000);
+                } else {
+                    showError("Failed to send message. Please try again.");
+                }
+            } catch (error) {
+                showError("An error occurred. Please try again.");
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
+            }
+        });
+
+        // Professional input interactions
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.classList.add('animate-professional-pulse');
+                setTimeout(() => this.classList.remove('animate-professional-pulse'), 200);
+            });
+            
+            input.addEventListener('invalid', function() {
+                this.style.borderColor = '#ef4444';
+                this.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+                setTimeout(() => {
+                    this.style.borderColor = '';
+                    this.style.boxShadow = '';
+                }, 2000);
+            });
+        });
+
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg animate-fade-in-up';
+            errorDiv.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.getElementById('contact-form').appendChild(errorDiv);
+            
+            setTimeout(() => {
+                errorDiv.remove();
+            }, 5000);
+        }
+
+        function updateMessagesDisplay() {
+            if (currentMessages.length > 0) {
+                const recentMessagesDiv = document.getElementById('recent-messages');
+                const messagesList = document.getElementById('messages-list');
+                
+                recentMessagesDiv.classList.remove('hidden');
+                messagesList.innerHTML = '';
+                
+                // Show last 3 messages
+                const recentMessages = currentMessages.slice(-3).reverse();
+                
+                recentMessages.forEach((msg, index) => {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'p-6 bg-gray-50 rounded-2xl border border-gray-100 animate-slide-in';
+                    messageDiv.style.animationDelay = `${index * 0.1}s`;
+                    
+                    const date = new Date(msg.submitted_at).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                    });
+                    
+                    messageDiv.innerHTML = `
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-blue-600 font-semibold text-sm">${msg.name.charAt(0).toUpperCase()}</span>
+                                </div>
+                                <span class="font-semibold text-gray-900">${msg.name}</span>
+                            </div>
+                            <span class="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">${date}</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">${msg.message.substring(0, 150)}${msg.message.length > 150 ? '...' : ''}</p>
+                        <div class="mt-3 text-xs text-gray-500">${msg.email}</div>
+                    `;
+                    
+                    messagesList.appendChild(messageDiv);
+                });
+            }
+        }
+
+        // Initialize the app
+        initializeApp();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996331895246ddcd',t:'MTc2MTc0NjM2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<title>RichLab</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  button { margin: 5px; padding: 5px 10px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h1 id="app_name"></h1>
+<p id="add_money_text"></p>
+<button id="add_money"></button>
+<p id="total_balance"></p>
+<p id="tasks_desc"></p>
+<p id="tasks_bonus"></p>
+<p id="invite_desc"></p>
+<p id="invite_bonus"></p>
+<p id="watch_desc"></p>
+<p id="watch_bonus"></p>
+<p id="withdraw_desc"></p>
+<p id="withdraw_condition"></p>
+<p id="withdraw_warning"></p>
+<button id="withdraw_button"></button>
+<p id="withdraw_lock"></p>
+<h3 id="support_title"></h3>
+<p id="support_text"></p>
+<button id="contact_support"></button>
+
+<hr>
+<button onclick="setLanguage('hy')">Հայերեն</button>
+<button onclick="setLanguage('ru')">Русский</button>
+<button onclick="setLanguage('gb')">English</button>
+<button onclick="setLanguage('kz')">Қазақша</button>
+
+<script>
+// Թարգմանություններ
+const translations = {
+  hy: {
+    app_name: "RichLab",
+    add_money_text: "Ավելացրեք գումար և սկսեք վաստակել",
+    add_money: "Ավելացնել գումար",
+    total_balance: "Ընդհանուր մնացորդ",
+    tasks_desc: "Փորձարկեք հավելվածներ և խաղեր",
+    tasks_bonus: "յուրաքանչյուրի համար",
+    invite_desc: "Ստացեք պարգև յուրաքանչյուր հրավերի համար",
+    invite_bonus: "եկամուտ",
+    watch_desc: "Դիտեք և վաստակեք գումար",
+    watch_bonus: "յուրաքանչյուրի համար",
+    withdraw_desc: "Ելքագրեք Ձեր վաստակած գումարը",
+    withdraw_condition: "աշխատանքային օր",
+    withdraw_warning: "⚠️ Գումարը կնստի Ձեր հաշվին 15 աշխատանքային օրերի ընթացքում",
+    withdraw_button: "Ելքագրել գումար",
+    withdraw_lock: "Դեպոզիտ չարած օգտատերերը չեն կարող կատարել withdrawal",
+    support_title: "Car Zone Support",
+    support_text: "Մենք այստեղ ենք՝ օգնելու համար",
+    contact_support: "Կապվել աջակցման թիմի հետ"
+  },
+  ru: {
+    app_name: "RichLab",
+    add_money_text: "Добавьте деньги и начните зарабатывать",
+    add_money: "Добавить деньги",
+    total_balance: "Общий баланс",
+    tasks_desc: "Тестируйте приложения и игры",
+    tasks_bonus: "за каждое",
+    invite_desc: "Получайте бонус за каждого приглашённого",
+    invite_bonus: "дохода",
+    watch_desc: "Смотрите и зарабатывайте деньги",
+    watch_bonus: "за каждое",
+    withdraw_desc: "Выведите заработанные деньги",
+    withdraw_condition: "рабочих дней",
+    withdraw_warning: "⚠️ Деньги поступят на ваш счёт в течение 15 рабочих дней",
+    withdraw_button: "Вывести деньги",
+    withdraw_lock: "Пользователи без депозита не могут выводить средства",
+    support_title: "Поддержка Car Zone",
+    support_text: "Мы всегда рады помочь",
+    contact_support: "Связаться с поддержкой"
+  },
+  gb: {
+    app_name: "RichLab",
+    add_money_text: "Add funds and start earning",
+    add_money: "Add Money",
+    total_balance: "Total Balance",
+    tasks_desc: "Test apps and games",
+    tasks_bonus: "each",
+    invite_desc: "Earn a reward for each friend you invite",
+    invite_bonus: "income",
+    watch_desc: "Watch and earn money",
+    watch_bonus: "each",
+    withdraw_desc: "Withdraw your earned funds",
+    withdraw_condition: "working days",
+    withdraw_warning: "⚠️ Funds will arrive in your account within 15 working days",
+    withdraw_button: "Withdraw Money",
+    withdraw_lock: "Users without a deposit cannot withdraw funds",
+    support_title: "Car Zone Support",
+    support_text: "We’re here to help",
+    contact_support: "Contact Support"
+  },
+  kz: {
+    app_name: "RichLab",
+    add_money_text: "Ақша қосып, табыс табуды бастаңыз",
+    add_money: "Ақша қосу",
+    total_balance: "Жалпы баланс",
+    tasks_desc: "Қосымшалар мен ойындарды сынаңыз",
+    tasks_bonus: "әрқайсысы үшін",
+    invite_desc: "Әр шақырылған адам үшін сыйақы алыңыз",
+    invite_bonus: "табыс",
+    watch_desc: "Қарап, ақша табыңыз",
+    watch_bonus: "әр бейне үшін",
+    withdraw_desc: "Тапқан ақшаңызды шығарыңыз",
+    withdraw_condition: "жұмыс күні",
+    withdraw_warning: "⚠️ Ақша 15 жұмыс күні ішінде шотыңызға түседі",
+    withdraw_button: "Ақша шығару",
+    withdraw_lock: "Депозитсіз пайдаланушылар шығара алмайды",
+    support_title: "Car Zone Қолдау қызметі",
+    support_text: "Біз көмектесуге дайынбыз",
+    contact_support: "Қолдауға хабарласу"
+  }
+};
+
+// Դինամիկ գումարներ
+let amounts = {
+  totalBalance: 150000,
+  tasksBonus: 3000,
+  inviteBonus: 5000,
+  watchBonus: 2800,
+  withdrawMin: 125000,
+  withdrawDays: 15
+};
+
+// Լեզու փոխելու ֆունկցիա
+function setLanguage(lang) {
+  const t = translations[lang];
+  document.getElementById('app_name').innerText = t.app_name;
+  document.getElementById('add_money_text').innerText = t.add_money_text;
+  document.getElementById('add_money').innerText = t.add_money;
+  document.getElementById('total_balance').innerText = `${t.total_balance}: ${amounts.totalBalance}֏`;
+  document.getElementById('tasks_desc').innerText = t.tasks_desc;
+  document.getElementById('tasks_bonus').innerText = `+֏${amounts.tasksBonus} ${t.tasks_bonus}`;
+  document.getElementById('invite_desc').innerText = t.invite_desc;
+  document.getElementById('invite_bonus').innerText = `+֏${amounts.inviteBonus} + 10% ${t.invite_bonus}`;
+  document.getElementById('watch_desc').innerText = t.watch_desc;
+  document.getElementById('watch_bonus').innerText = `+֏${amounts.watchBonus} ${t.watch_bonus}`;
+  document.getElementById('withdraw_desc').innerText = t.withdraw_desc;
+  document.getElementById('withdraw_condition').innerText = `֏${amounts.withdrawMin} + ${amounts.withdrawDays} ${t.withdraw_condition}`;
+  document.getElementById('withdraw_warning').innerText = t.withdraw_warning;
+  document.getElementById('withdraw_button').innerText = t.withdraw_button;
+  document.getElementById('withdraw_lock').innerText = t.withdraw_lock;
+  document.getElementById('support_title').innerText = t.support_title;
+  document.getElementById('support_text').innerText = t.support_text;
+  document.getElementById('contact_support').innerText = t.contact_support;
+}
+
+// Սկզբնական լեզու
+setLanguage('hy');
+</script>
 </body>
-<script>
-window.addEventListener("DOMContentLoaded", () => {
-  try {
-    const tg = window.Telegram?.WebApp || {};
-    const user = tg.initDataUnsafe?.user || { id: "demo_user", first_name: "Guest" };
-
-    // Եթե Telegram-ի տվյալ չկա → demo ռեժիմ
-    if (!tg.initDataUnsafe) {
-      console.warn("⚠️ Demo mode enabled (no Telegram data)");
-
-      const loginScreen = document.getElementById("login-screen");
-      if (loginScreen) loginScreen.style.display = "none";
-
-      const balance = document.getElementById("main-balance");
-      if (balance) balance.textContent = "֏0 (Demo)";
-
-      // Ցույց ենք տալիս, որ demo է
-      const banner = document.createElement("div");
-      banner.textContent = "🔧 DEMO MODE (no Telegram)";
-      banner.style.position = "fixed";
-      banner.style.bottom = "10px";
-      banner.style.right = "10px";
-      banner.style.padding = "6px 10px";
-      banner.style.background = "#f59e0b";
-      banner.style.color = "#fff";
-      banner.style.borderRadius = "6px";
-      banner.style.fontWeight = "bold";
-      banner.style.fontSize = "14px";
-      banner.style.zIndex = "9999";
-      document.body.appendChild(banner);
-    } else {
-      console.log("✅ Telegram user detected:", user);
-    }
-
-    window.TG_USER = user;
-  } catch (err) {
-    console.error("Demo script error:", err);
-  }
-});
-</script>
-<script>
-(function() {
-  // Փորձում ենք ստանալ Telegram օբյեկտը
-  const tg = window.Telegram?.WebApp;
-  const isTelegram = !!(tg && tg.initDataUnsafe && tg.initDataUnsafe.user);
-
-  // Եթե բացվել է Telegram-ի ներսում
-  if (isTelegram) {
-    const user = tg.initDataUnsafe.user;
-    console.log("✅ Telegram user:", user);
-
-    // Թաքցնում ենք loading-ը, եթե դեռ երևում է
-    const loading = document.getElementById("login-loading");
-    if (loading) loading.classList.add("hidden");
-
-    const loginScreen = document.getElementById("login-screen");
-    if (loginScreen) loginScreen.style.display = "none";
-
-  } else {
-    // Եթե ոչ Telegram → demo ռեժիմ
-    console.warn("⚠️ Running in demo mode (no Telegram)");
-
-    const loginScreen = document.getElementById("login-screen");
-    if (loginScreen) loginScreen.style.display = "none";
-
-    const balance = document.getElementById("main-balance");
-    if (balance) balance.textContent = "֏0 (Demo)";
-
-    const note = document.createElement("div");
-    note.textContent = "🔧 Demo Mode";
-    note.style.position = "fixed";
-    note.style.bottom = "10px";
-    note.style.right = "10px";
-    note.style.background = "#f59e0b";
-    note.style.color = "#fff";
-    note.style.padding = "6px 10px";
-    note.style.borderRadius = "8px";
-    note.style.fontWeight = "bold";
-    note.style.zIndex = "9999";
-    document.body.appendChild(note);
-  }
-})();
-</script>
 </html>
-
-
