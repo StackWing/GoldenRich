@@ -2315,23 +2315,20 @@ setInterval(updateBlockchainData,30000);
     const formattedBalance = `֏${currentBalance.toLocaleString('hy-AM')}`;
     
     // Update main balance
-    const mainBalance = document.getElementById('main-balance');
-    if (mainBalance) {
-        mainBalance.textContent = formattedBalance;
-    }
-    
-    // Update invite section balance
-    const inviteBalance = document.getElementById('invite-balance');
-    if (inviteBalance) {
-        inviteBalance.textContent = formattedBalance;
-    }
-    
-    // Update cash balance
-    const cashBalance = document.getElementById('cash-balance');
-    if (cashBalance) {
-        cashBalance.textContent = formattedBalance;
-    }
-}
+    function animateBalanceUpdate(amount) {
+            const balanceCard = document.getElementById('balance-card');
+            balanceCard.classList.add('balance-update');
+            
+            setTimeout(() => {
+                balanceCard.classList.remove('balance-update');
+            }, 600);
+        }
+
+        // Deposit Modal Functions
+        function showDepositModal() {
+            triggerHaptic('light');
+            const modal = document.getElementById('deposit-modal');
+            modal.style.display = 'flex';
 
         
 
